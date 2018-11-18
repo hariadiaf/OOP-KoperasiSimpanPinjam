@@ -5,27 +5,26 @@
  */
 package koperasisimmpanpinjam;
 
-/**
- *
- * @author Yazid
- */
-public class Simpanan implements Editableiface {
+import java.util.ArrayList;
+
+    public class Simpanan implements Editableiface {
     private String noAnggota;
     private String idSimpanan;
     private double jumlahSimpanan;
     private double simpananPokok;
     private double simpananWajib;
     
-    private Catatan catatan;
+    private ArrayList<Catatan> catatan;
 
     public void simpanan(){
-        this.catatan = new Catatan();
-        catatan.set_jenisCatatan("Simpanan");
+        this.catatan = new ArrayList<>();
+        catatan.add(new Catatan());
+        catatan.get(0).set_jenisCatatan("Simpanan");
     }
-    
+
     @Override
-    public void simpan(){
-        
+    public void simpan(String id, double jumlah){
+        catatan.add(new Catatan());
     };
     
     public String get_idSimpanan(){
@@ -37,10 +36,18 @@ public class Simpanan implements Editableiface {
 
         this.idSimpanan = idSimpanan;
     };
-    
+
     @Override
-    public void edit(){
-    
+    public void edit(String id, double jumlah){
+        int idx=-1;
+        for (int i = 0; i < catatan.size() ; i++) {
+            if (catatan.get(i).getIdCatatan().equals(id)){
+                 idx = i;
+            }
+        }
+        if (idx!=-1){
+            catatan.get(idx);
+        }
     };
     
     @Override

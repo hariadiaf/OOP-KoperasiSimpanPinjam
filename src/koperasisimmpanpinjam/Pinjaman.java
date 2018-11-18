@@ -5,10 +5,8 @@
  */
 package koperasisimmpanpinjam;
 
-/**
- *
- * @author Yazid
- */
+import java.util.ArrayList;
+
 public class Pinjaman implements Editableiface{
     private String noAnggota;
     private String idPinjaman;
@@ -17,12 +15,13 @@ public class Pinjaman implements Editableiface{
     private String tglPinjaman;
     private float bunga;
     
-    private Catatan catatan;
+    private ArrayList<Catatan> catatan;
     private Angsuran angsuran;
     
     public void pinjaman(){
-        this.catatan = new Catatan();
-        catatan.set_jenisCatatan("Pinjaman");
+        this.catatan = new ArrayList<>();
+        catatan.add(new Catatan());
+        catatan.get(0).set_jenisCatatan("Pinjaman");
         this.angsuran = new Angsuran();
         
     };
@@ -38,12 +37,12 @@ public class Pinjaman implements Editableiface{
     }
     
     @Override
-    public void simpan() {
+    public void simpan(String id, double jumlah) {
 
     }
 
     @Override
-    public void edit() {
+    public void edit(String id, double jumlah) {
 
     }
 

@@ -7,8 +7,8 @@ package koperasisimmpanpinjam;
 
 public interface Editableiface {
 
-    public void simpan();
-    public void edit();
+    public void simpan(String id, double jumlah);
+    public void edit(String id, double jumlah);
     public void update();
     public void delete();
 }
