@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package koperasisimmpanpinjam;
+package koperasisimmpanpinjam.model;
 
 import java.util.ArrayList;
 
@@ -23,7 +23,8 @@ import java.util.ArrayList;
     }
 
     @Override
-    public void simpan(String id, double jumlah){
+    public void simpan(String id, double jumlah)
+    {
         catatan.add(new Catatan());
     };
     

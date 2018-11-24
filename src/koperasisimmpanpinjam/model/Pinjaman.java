@@ -3,29 +3,39 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package koperasisimmpanpinjam;
-
+package koperasisimmpanpinjam.model;
 
 import java.util.ArrayList;
 
-public class Angsuran implements Editableiface {
+public class Pinjaman implements Editableiface{
     private String noAnggota;
-    private String idAngsuran;
-    private double banyakPinjaman;
-    private double sisaAngsuran;
     private String idPinjaman;
+    private double jmlPinjaman;
+    private String durasinPinjaman;
+    private String tglPinjaman;
     private float bunga;
-    private String tglAngsuran;
-    private double denda;
-    private ArrayList<Catatan> catatan;
     
-    public Angsuran(){
+    private ArrayList<Catatan> catatan;
+    private Angsuran angsuran;
+    
+    public void pinjaman(){
         this.catatan = new ArrayList<>();
         catatan.add(new Catatan());
-        catatan.get(0).set_jenisCatatan("Angsuran");
+        catatan.get(0).set_jenisCatatan("Pinjaman");
+        this.angsuran = new Angsuran();
+        
+    };
+    
+    public String get_idPinjaman(){
+        //PLACEHOLDER
+        return null;
     }
+    
+    public void set_idPinjaman(String idPinjaman){
 
-
+        this.idPinjaman = idPinjaman;
+    }
+    
     @Override
     public void simpan(String id, double jumlah) {
 
@@ -45,4 +55,6 @@ public class Angsuran implements Editableiface {
     public void delete() {
 
     }
+    
+    
 }

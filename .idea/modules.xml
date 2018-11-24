@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/KoperasiSimmpanPinjam.iml" filepath="$PROJECT_DIR$/KoperasiSimmpanPinjam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP-KoperasiSimpanPinjam.iml" filepath="$PROJECT_DIR$/OOP-KoperasiSimpanPinjam.iml" />
     </modules>
   </component>
 </project>

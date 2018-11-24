@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91e5db67-fbf9-4192-8811-ac4b6c9cc43d" name="Default Changelist" comment="Implement Class">
-      <change afterPath="D:/CODING/JAVA/ASsesment2/src/com/company/Person.java" afterDir="false" />
-      <change afterPath="D:/CODING/JAVA/TP1/src/Nomor5.java" afterDir="false" />
-      <change afterPath="D:/CODING/JAVA/Tp7/src/Animal_1301174252.java" afterDir="false" />
-      <change afterPath="D:/CODING/Python/venv/coba.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoperasiSimmpanPinjam/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="17f813ea-4c5e-4627-b7d7-494f084f2dbc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/view/Test.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/view/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Angsuran.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Angsuran.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Catatan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Catatan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Editableiface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Editableiface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Pinjaman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Pinjaman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Simpanan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Simpanan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Anggota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Anggota.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Angsuran.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Angsuran.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Catatan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Catatan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Editableiface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Editableiface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/koperasisimmpanpinjam/KoperasiSimmpanPinjam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/model/KoperasiSimmpanPinjam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Masuk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Masuk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Pinjaman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Pinjaman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/koperasisimmpanpinjam/Simpanan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Simpanan.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,153 +25,106 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1772944673">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.52" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="259" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="259" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-695621299">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.28" value="1" />
-          <entry key="project.open.time.43" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="11" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="11" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="887" />
-          <entry key="txt" value="19" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="887" />
-          <entry key="PLAIN_TEXT" value="19" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Admin.java">
+        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Anggota.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="51">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Catatan.java">
+        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Angsuran.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+            <state relative-caret-position="-7">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Editableiface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Simpanan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding>
-                <element signature="e#492#493#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#784#785#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Angsuran.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Editableiface.java">
+        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/view/Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/KoperasiSimmpanPinjam.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Masuk.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Pinjaman.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Simpanan.java">
+        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/view/Test.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Catatan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="42" column="51" lean-forward="true" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
-              <folding>
-                <element signature="e#761#762#0" expanded="true" />
-                <element signature="e#803#804#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Masuk.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Pinjaman.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/KoperasiSimmpanPinjam.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -175,25 +132,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/koperasisimmpanpinjam/Admin.java" />
         <option value="$PROJECT_DIR$/src/koperasisimmpanpinjam/Anggota.java" />
-        <option value="$PROJECT_DIR$/src/koperasisimmpanpinjam/KoperasiSimmpanPinjam.java" />
-        <option value="$PROJECT_DIR$/src/koperasisimmpanpinjam/Masuk.java" />
-        <option value="$PROJECT_DIR$/src/koperasisimmpanpinjam/Editableiface.java" />
-        <option value="$PROJECT_DIR$/src/koperasisimmpanpinjam/Angsuran.java" />
-        <option value="$PROJECT_DIR$/src/koperasisimmpanpinjam/Catatan.java" />
         <option value="$PROJECT_DIR$/src/koperasisimmpanpinjam/Simpanan.java" />
-        <option value="$PROJECT_DIR$/src/koperasisimmpanpinjam/Pinjaman.java" />
+        <option value="$PROJECT_DIR$/src/koperasisimmpanpinjam/Catatan.java" />
+        <option value="$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Simpanan.java" />
+        <option value="$PROJECT_DIR$/src/koperasisimmpanpinjam/view/Test.form" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="23" />
-    <option name="y" value="-25" />
-    <option name="width" value="784" />
-    <option name="height" value="788" />
+    <option name="x" value="15" />
+    <option name="y" value="30" />
+    <option name="width" value="1890" />
+    <option name="height" value="975" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -219,6 +171,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="koperasisimmpanpinjam" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="OOP-KoperasiSimpanPinjam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOP-KoperasiSimpanPinjam" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="koperasisimmpanpinjam" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOP-KoperasiSimpanPinjam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOP-KoperasiSimpanPinjam" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="koperasisimmpanpinjam" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="e9f4de52:FormNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -226,8 +193,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542508057995" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543042994028" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -243,11 +214,11 @@
   </component>
   <component name="RunManager">
     <configuration name="KoperasiSimmpanPinjam" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="koperasisimmpanpinjam.KoperasiSimmpanPinjam" />
-      <module name="KoperasiSimmpanPinjam" />
+      <option name="MAIN_CLASS_NAME" value="koperasisimmpanpinjam.model.KoperasiSimmpanPinjam" />
+      <module name="OOP-KoperasiSimpanPinjam" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="koperasisimmpanpinjam.*" />
+          <option name="PATTERN" value="koperasisimmpanpinjam.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -266,19 +237,28 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="91e5db67-fbf9-4192-8811-ac4b6c9cc43d" name="Default Changelist" comment="" />
-      <created>1542445956006</created>
+      <changelist id="17f813ea-4c5e-4627-b7d7-494f084f2dbc" name="Default Changelist" comment="" />
+      <created>1542911754949</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1542445956006</updated>
+      <updated>1542911754949</updated>
+      <workItem from="1542911756803" duration="788000" />
+      <workItem from="1543014815798" duration="164000" />
+      <workItem from="1543030501019" duration="225000" />
+      <workItem from="1543030758903" duration="132000" />
+      <workItem from="1543040044775" duration="36000" />
+      <workItem from="1543040214362" duration="2752000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4097000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1452345" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27125505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -287,130 +267,108 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32872504" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32867134" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.32872504" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="Designer" order="1" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24962178" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-    </layout-to-restore>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Class" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Anggota.java">
+    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Masuk.java">
+    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Anggota.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="51">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Admin.java">
+    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Angsuran.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state relative-caret-position="-7">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/KoperasiSimmpanPinjam.java">
+    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Catatan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="51">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Editableiface.java">
+    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Editableiface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        <state relative-caret-position="51">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Angsuran.java">
+    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/KoperasiSimmpanPinjam.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="51">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Catatan.java">
+    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Masuk.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        <state relative-caret-position="-7">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Pinjaman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/model/Simpanan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding>
-            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Pinjaman.java">
+    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/view/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+        <state relative-caret-position="102">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/Simpanan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="42" column="51" lean-forward="true" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
-          <folding>
-            <element signature="e#761#762#0" expanded="true" />
-            <element signature="e#803#804#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/koperasisimmpanpinjam/view/Test.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
 </project>

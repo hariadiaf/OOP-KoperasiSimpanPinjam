@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package koperasisimmpanpinjam;
+package koperasisimmpanpinjam.model;
 
+public class Masuk {
+    private String id;
+    private String pass;
+    private String username;
+    
+    public void input(){
 
-public class Admin {
-    private String idAdmin;
-    
-    
-    public void deleteAnggota(){
+    };
+    public void login(){
 
     };
     
-    public void tambahAnggota(){
-    
-    };
 }
