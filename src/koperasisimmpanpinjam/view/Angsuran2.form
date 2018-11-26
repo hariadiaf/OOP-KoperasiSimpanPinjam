@@ -70,7 +70,7 @@
                   <Component id="txtSimpananWajib" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="109" max="32767" attributes="0"/>
+                  <EmptySpace pref="129" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -112,41 +112,34 @@
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="txtBesarPinjaman" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txNamaPinjaman" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtTglPinjam" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtTglBayar" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtJmlAngsur" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtTglAngsuran" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtTglDeadline" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="inputTglPinjam" alignment="0" min="-2" pref="784" max="-2" attributes="0"/>
-                                  <Component id="inputNamaPinjPinjaman" alignment="0" min="-2" pref="784" max="-2" attributes="0"/>
-                                  <Component id="inputBesarPinjaman" alignment="0" min="-2" pref="784" max="-2" attributes="0"/>
-                                  <Component id="inputTglBayar" min="-2" pref="784" max="-2" attributes="0"/>
+                                  <Component id="inputTglAngsuran" alignment="0" min="-2" pref="784" max="-2" attributes="0"/>
+                                  <Component id="inputAngsAngsuran" alignment="0" min="-2" pref="784" max="-2" attributes="0"/>
+                                  <Component id="inputNamaPinjAngsuran" alignment="0" min="-2" pref="784" max="-2" attributes="0"/>
+                                  <Component id="DeadlineAngsuran" alignment="0" min="-2" pref="784" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="636" max="-2" attributes="0"/>
-                                      <Component id="btnPinjam" min="-2" pref="148" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                      <Component id="checkBoxPinjaman" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                          <Component id="cbText1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="checkBoxPinjaman" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Component id="cbText1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="254" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="btnBayarAngsuran" min="-2" pref="148" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="340" max="-2" attributes="0"/>
-                      <Component id="cbText2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -156,32 +149,30 @@
                       <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txtBesarPinjaman" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="inputBesarPinjaman" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                          <Component id="inputNamaPinjAngsuran" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtTglPinjam" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="inputTglPinjam" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                          <Component id="txtTglAngsuran" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="inputTglAngsuran" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtTglBayar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="inputTglBayar" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                          <Component id="txtTglDeadline" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="DeadlineAngsuran" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="inputNamaPinjPinjaman" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                          <Component id="txNamaPinjaman" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="inputAngsAngsuran" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                          <Component id="txtJmlAngsur" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="checkBoxPinjaman" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="cbText1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="cbText2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="btnPinjam" min="-2" pref="52" max="-2" attributes="0"/>
-                      <EmptySpace pref="29" max="32767" attributes="0"/>
+                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <Component id="btnBayarAngsuran" min="-2" pref="52" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -192,26 +183,26 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Besar Pinjaman"/>
+                <Property name="text" type="java.lang.String" value="Nama Pinjaman"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="inputBesarPinjaman">
+            <Component class="javax.swing.JTextField" name="inputNamaPinjAngsuran">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Rp.1.000.000,00"/>
+                <Property name="text" type="java.lang.String" value="Beli Motor"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txtTglPinjam">
+            <Component class="javax.swing.JLabel" name="txtTglAngsuran">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Tanggal Pinjam"/>
+                <Property name="text" type="java.lang.String" value="Tanggal"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="inputTglPinjam">
+            <Component class="javax.swing.JTextField" name="inputTglAngsuran">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
@@ -219,26 +210,26 @@
                 <Property name="text" type="java.lang.String" value="DD/MM/YYYY"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inputTglPinjamActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inputTglAngsuranActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="txNamaPinjaman">
+            <Component class="javax.swing.JLabel" name="txtJmlAngsur">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Nama Pinjaman"/>
+                <Property name="text" type="java.lang.String" value="Jumlah Angsur"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="inputNamaPinjPinjaman">
+            <Component class="javax.swing.JTextField" name="inputAngsAngsuran">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Nama/Tujuan"/>
+                <Property name="text" type="java.lang.String" value="Rp.-"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnPinjam">
+            <Component class="javax.swing.JButton" name="btnBayarAngsuran">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="0" red="66" type="rgb"/>
@@ -246,34 +237,37 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Pinjam"/>
+                <Property name="text" type="java.lang.String" value="Angsur"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPinjamActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBayarAngsuranActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="txtTglBayar">
+            <Component class="javax.swing.JLabel" name="txtTglDeadline">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Tanggal Bayar"/>
+                <Property name="text" type="java.lang.String" value="Deadline"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="inputTglBayar">
+            <Component class="javax.swing.JTextField" name="DeadlineAngsuran">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="DD/MM/YYYY"/>
+                <Property name="text" type="java.lang.String" value="21/12/2021"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeadlineAngsuranActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JCheckBox" name="checkBoxPinjaman">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="24" style="2"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Dengan ini saya menyatakan setuju dengan jumlah yang akan saya"/>
+                <Property name="text" type="java.lang.String" value="Dengan ini saya menyatakan setuju dengan jumlah"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checkBoxPinjamanActionPerformed"/>
@@ -284,15 +278,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="24" style="2"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="pinjam dengan besar bunga 5% dan apabila telat membayar akan "/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="cbText2">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Roboto" size="24" style="2"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="menambah bayar Rp.5000.000,00"/>
+                <Property name="text" type="java.lang.String" value="yang akan saya angsur"/>
               </Properties>
             </Component>
           </SubComponents>

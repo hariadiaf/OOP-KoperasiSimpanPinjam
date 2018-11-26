@@ -9,12 +9,12 @@ package koperasisimmpanpinjam.view;
  *
  * @author Hariadi Adha F
  */
-public class Pinjaman extends javax.swing.JFrame {
+public class Angsuran2 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Pinjaman
+     * Creates new form Angsuran2
      */
-    public Pinjaman() {
+    public Angsuran2() {
         initComponents();
     }
 
@@ -31,17 +31,16 @@ public class Pinjaman extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         txtBesarPinjaman = new javax.swing.JLabel();
-        inputBesarPinjaman = new javax.swing.JTextField();
-        txtTglPinjam = new javax.swing.JLabel();
-        inputTglPinjam = new javax.swing.JTextField();
-        txNamaPinjaman = new javax.swing.JLabel();
-        inputNamaPinjPinjaman = new javax.swing.JTextField();
-        btnPinjam = new javax.swing.JButton();
-        txtTglBayar = new javax.swing.JLabel();
-        inputTglBayar = new javax.swing.JTextField();
+        inputNamaPinjAngsuran = new javax.swing.JTextField();
+        txtTglAngsuran = new javax.swing.JLabel();
+        inputTglAngsuran = new javax.swing.JTextField();
+        txtJmlAngsur = new javax.swing.JLabel();
+        inputAngsAngsuran = new javax.swing.JTextField();
+        btnBayarAngsuran = new javax.swing.JButton();
+        txtTglDeadline = new javax.swing.JLabel();
+        DeadlineAngsuran = new javax.swing.JTextField();
         checkBoxPinjaman = new javax.swing.JCheckBox();
         cbText1 = new javax.swing.JLabel();
-        cbText2 = new javax.swing.JLabel();
         txtSimpananWajib = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -64,45 +63,50 @@ public class Pinjaman extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(229, 229, 229));
 
         txtBesarPinjaman.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
-        txtBesarPinjaman.setText("Besar Pinjaman");
+        txtBesarPinjaman.setText("Nama Pinjaman");
 
-        inputBesarPinjaman.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
-        inputBesarPinjaman.setText("Rp.1.000.000,00");
+        inputNamaPinjAngsuran.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
+        inputNamaPinjAngsuran.setText("Beli Motor");
 
-        txtTglPinjam.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
-        txtTglPinjam.setText("Tanggal Pinjam");
+        txtTglAngsuran.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
+        txtTglAngsuran.setText("Tanggal");
 
-        inputTglPinjam.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
-        inputTglPinjam.setText("DD/MM/YYYY");
-        inputTglPinjam.addActionListener(new java.awt.event.ActionListener() {
+        inputTglAngsuran.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
+        inputTglAngsuran.setText("DD/MM/YYYY");
+        inputTglAngsuran.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputTglPinjamActionPerformed(evt);
+                inputTglAngsuranActionPerformed(evt);
             }
         });
 
-        txNamaPinjaman.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
-        txNamaPinjaman.setText("Nama Pinjaman");
+        txtJmlAngsur.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
+        txtJmlAngsur.setText("Jumlah Angsur");
 
-        inputNamaPinjPinjaman.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
-        inputNamaPinjPinjaman.setText("Nama/Tujuan");
+        inputAngsAngsuran.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
+        inputAngsAngsuran.setText("Rp.-");
 
-        btnPinjam.setBackground(new java.awt.Color(102, 0, 51));
-        btnPinjam.setFont(new java.awt.Font("Roboto", 1, 32)); // NOI18N
-        btnPinjam.setText("Pinjam");
-        btnPinjam.addActionListener(new java.awt.event.ActionListener() {
+        btnBayarAngsuran.setBackground(new java.awt.Color(102, 0, 51));
+        btnBayarAngsuran.setFont(new java.awt.Font("Roboto", 1, 32)); // NOI18N
+        btnBayarAngsuran.setText("Angsur");
+        btnBayarAngsuran.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPinjamActionPerformed(evt);
+                btnBayarAngsuranActionPerformed(evt);
             }
         });
 
-        txtTglBayar.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
-        txtTglBayar.setText("Tanggal Bayar");
+        txtTglDeadline.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
+        txtTglDeadline.setText("Deadline");
 
-        inputTglBayar.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
-        inputTglBayar.setText("DD/MM/YYYY");
+        DeadlineAngsuran.setFont(new java.awt.Font("Roboto", 0, 32)); // NOI18N
+        DeadlineAngsuran.setText("21/12/2021");
+        DeadlineAngsuran.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeadlineAngsuranActionPerformed(evt);
+            }
+        });
 
         checkBoxPinjaman.setFont(new java.awt.Font("Roboto", 2, 24)); // NOI18N
-        checkBoxPinjaman.setText("Dengan ini saya menyatakan setuju dengan jumlah yang akan saya");
+        checkBoxPinjaman.setText("Dengan ini saya menyatakan setuju dengan jumlah");
         checkBoxPinjaman.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 checkBoxPinjamanActionPerformed(evt);
@@ -110,10 +114,7 @@ public class Pinjaman extends javax.swing.JFrame {
         });
 
         cbText1.setFont(new java.awt.Font("Roboto", 2, 24)); // NOI18N
-        cbText1.setText("pinjam dengan besar bunga 5% dan apabila telat membayar akan ");
-
-        cbText2.setFont(new java.awt.Font("Roboto", 2, 24)); // NOI18N
-        cbText2.setText("menambah bayar Rp.5000.000,00");
+        cbText1.setText("yang akan saya angsur");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -125,31 +126,26 @@ public class Pinjaman extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtBesarPinjaman)
-                            .addComponent(txNamaPinjaman)
-                            .addComponent(txtTglPinjam)
-                            .addComponent(txtTglBayar))
+                            .addComponent(txtJmlAngsur)
+                            .addComponent(txtTglAngsuran)
+                            .addComponent(txtTglDeadline))
                         .addGap(37, 37, 37)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(inputTglPinjam, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(inputNamaPinjPinjaman, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(inputBesarPinjaman, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(inputTglBayar, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(inputTglAngsuran, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputAngsAngsuran, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputNamaPinjAngsuran, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(DeadlineAngsuran, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(67, 67, 67))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(checkBoxPinjaman)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 636, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnPinjam, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(checkBoxPinjaman)
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addGap(28, 28, 28)
-                                    .addComponent(cbText1))))
-                        .addGap(85, 85, 85))))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(340, 340, 340)
-                .addComponent(cbText2)
-                .addGap(0, 0, Short.MAX_VALUE))
+                                .addGap(28, 28, 28)
+                                .addComponent(cbText1)))
+                        .addGap(254, 254, 254))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(btnBayarAngsuran, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(87, 87, 87))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,28 +153,26 @@ public class Pinjaman extends javax.swing.JFrame {
                 .addGap(75, 75, 75)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtBesarPinjaman)
-                    .addComponent(inputBesarPinjaman, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputNamaPinjAngsuran, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtTglPinjam)
-                    .addComponent(inputTglPinjam, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTglAngsuran)
+                    .addComponent(inputTglAngsuran, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtTglBayar)
-                    .addComponent(inputTglBayar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTglDeadline)
+                    .addComponent(DeadlineAngsuran, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputNamaPinjPinjaman, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txNamaPinjaman))
+                    .addComponent(inputAngsAngsuran, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtJmlAngsur))
                 .addGap(38, 38, 38)
                 .addComponent(checkBoxPinjaman)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cbText1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cbText2)
-                .addGap(31, 31, 31)
-                .addComponent(btnPinjam, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(btnBayarAngsuran, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51))
         );
 
         txtSimpananWajib.setFont(new java.awt.Font("Roboto", 1, 64)); // NOI18N
@@ -210,7 +204,7 @@ public class Pinjaman extends javax.swing.JFrame {
                 .addComponent(txtSimpananWajib)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -227,17 +221,21 @@ public class Pinjaman extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnPinjamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPinjamActionPerformed
+    private void inputTglAngsuranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputTglAngsuranActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnPinjamActionPerformed
+    }//GEN-LAST:event_inputTglAngsuranActionPerformed
+
+    private void btnBayarAngsuranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBayarAngsuranActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBayarAngsuranActionPerformed
 
     private void checkBoxPinjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPinjamanActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_checkBoxPinjamanActionPerformed
 
-    private void inputTglPinjamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputTglPinjamActionPerformed
+    private void DeadlineAngsuranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeadlineAngsuranActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inputTglPinjamActionPerformed
+    }//GEN-LAST:event_DeadlineAngsuranActionPerformed
 
     /**
      * @param args the command line arguments
@@ -256,40 +254,39 @@ public class Pinjaman extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Pinjaman.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Angsuran2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Pinjaman.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Angsuran2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Pinjaman.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Angsuran2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Pinjaman.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Angsuran2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Pinjaman().setVisible(true);
+                new Angsuran2().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnPinjam;
+    private javax.swing.JTextField DeadlineAngsuran;
+    private javax.swing.JButton btnBayarAngsuran;
     private javax.swing.JLabel cbText1;
-    private javax.swing.JLabel cbText2;
     private javax.swing.JCheckBox checkBoxPinjaman;
-    private javax.swing.JTextField inputBesarPinjaman;
-    private javax.swing.JTextField inputNamaPinjPinjaman;
-    private javax.swing.JTextField inputTglBayar;
-    private javax.swing.JTextField inputTglPinjam;
+    private javax.swing.JTextField inputAngsAngsuran;
+    private javax.swing.JTextField inputNamaPinjAngsuran;
+    private javax.swing.JTextField inputTglAngsuran;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel txNamaPinjaman;
     private javax.swing.JLabel txtBesarPinjaman;
+    private javax.swing.JLabel txtJmlAngsur;
     private javax.swing.JLabel txtSimpananWajib;
-    private javax.swing.JLabel txtTglBayar;
-    private javax.swing.JLabel txtTglPinjam;
+    private javax.swing.JLabel txtTglAngsuran;
+    private javax.swing.JLabel txtTglDeadline;
     // End of variables declaration//GEN-END:variables
 }
