@@ -39,8 +39,8 @@ public class Angsuran2 extends javax.swing.JFrame {
         btnBayarAngsuran = new javax.swing.JButton();
         txtTglDeadline = new javax.swing.JLabel();
         DeadlineAngsuran = new javax.swing.JTextField();
-        checkBoxPinjaman = new javax.swing.JCheckBox();
-        cbText1 = new javax.swing.JLabel();
+        checkBoxAngsuran = new javax.swing.JCheckBox();
+        cbText1Angs = new javax.swing.JLabel();
         txtAngsuran = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -105,16 +105,16 @@ public class Angsuran2 extends javax.swing.JFrame {
             }
         });
 
-        checkBoxPinjaman.setFont(new java.awt.Font("Roboto", 2, 24)); // NOI18N
-        checkBoxPinjaman.setText("Dengan ini saya menyatakan setuju dengan jumlah");
-        checkBoxPinjaman.addActionListener(new java.awt.event.ActionListener() {
+        checkBoxAngsuran.setFont(new java.awt.Font("Roboto", 2, 24)); // NOI18N
+        checkBoxAngsuran.setText("Dengan ini saya menyatakan setuju dengan jumlah");
+        checkBoxAngsuran.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkBoxPinjamanActionPerformed(evt);
+                checkBoxAngsuranActionPerformed(evt);
             }
         });
 
-        cbText1.setFont(new java.awt.Font("Roboto", 2, 24)); // NOI18N
-        cbText1.setText("yang akan saya angsur");
+        cbText1Angs.setFont(new java.awt.Font("Roboto", 2, 24)); // NOI18N
+        cbText1Angs.setText("yang akan saya angsur");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -138,10 +138,10 @@ public class Angsuran2 extends javax.swing.JFrame {
                         .addGap(67, 67, 67))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(checkBoxPinjaman)
+                            .addComponent(checkBoxAngsuran)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(28, 28, 28)
-                                .addComponent(cbText1)))
+                                .addComponent(cbText1Angs)))
                         .addGap(254, 254, 254))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addComponent(btnBayarAngsuran, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -167,9 +167,9 @@ public class Angsuran2 extends javax.swing.JFrame {
                     .addComponent(inputAngsAngsuran, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtJmlAngsur))
                 .addGap(38, 38, 38)
-                .addComponent(checkBoxPinjaman)
+                .addComponent(checkBoxAngsuran)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cbText1)
+                .addComponent(cbText1Angs)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(btnBayarAngsuran, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(51, 51, 51))
@@ -226,9 +226,9 @@ public class Angsuran2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBayarAngsuranActionPerformed
 
-    private void checkBoxPinjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPinjamanActionPerformed
+    private void checkBoxAngsuranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxAngsuranActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_checkBoxPinjamanActionPerformed
+    }//GEN-LAST:event_checkBoxAngsuranActionPerformed
 
     private void DeadlineAngsuranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeadlineAngsuranActionPerformed
         // TODO add your handling code here:
@@ -272,8 +272,8 @@ public class Angsuran2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField DeadlineAngsuran;
     private javax.swing.JButton btnBayarAngsuran;
-    private javax.swing.JLabel cbText1;
-    private javax.swing.JCheckBox checkBoxPinjaman;
+    private javax.swing.JLabel cbText1Angs;
+    private javax.swing.JCheckBox checkBoxAngsuran;
     private javax.swing.JTextField inputAngsAngsuran;
     private javax.swing.JTextField inputNamaPinjAngsuran;
     private javax.swing.JTextField inputTglAngsuran;

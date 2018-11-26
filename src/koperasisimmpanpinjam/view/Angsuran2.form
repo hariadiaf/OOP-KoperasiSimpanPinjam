@@ -122,10 +122,10 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="checkBoxPinjaman" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="checkBoxAngsuran" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                      <Component id="cbText1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cbText1Angs" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="254" max="-2" attributes="0"/>
@@ -162,9 +162,9 @@
                           <Component id="txtJmlAngsur" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                      <Component id="checkBoxPinjaman" min="-2" max="-2" attributes="0"/>
+                      <Component id="checkBoxAngsuran" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="cbText1" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbText1Angs" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="27" max="32767" attributes="0"/>
                       <Component id="btnBayarAngsuran" min="-2" pref="52" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
@@ -257,7 +257,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeadlineAngsuranActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="checkBoxPinjaman">
+            <Component class="javax.swing.JCheckBox" name="checkBoxAngsuran">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="24" style="2"/>
@@ -265,10 +265,10 @@
                 <Property name="text" type="java.lang.String" value="Dengan ini saya menyatakan setuju dengan jumlah"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checkBoxPinjamanActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checkBoxAngsuranActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="cbText1">
+            <Component class="javax.swing.JLabel" name="cbText1Angs">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="24" style="2"/>
