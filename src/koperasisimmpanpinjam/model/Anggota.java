@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package koperasisimmpanpinjam.model;
 
 public class Anggota {
@@ -11,6 +6,16 @@ public class Anggota {
     private String Alamat;
     private String Status;
     private String TglLahir;
+
+    public Anggota(String noAnggota, String namaAnggota, String Alamat, String Status, String TglLahir) {
+        this.noAnggota = noAnggota;
+        this.namaAnggota = namaAnggota;
+        this.Alamat = Alamat;
+        this.Status = Status;
+        this.TglLahir = TglLahir;
+    }
+    
+    
     
     public void menyimpan(){
 

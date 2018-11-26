@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package koperasisimmpanpinjam.model;
 
 import java.util.ArrayList;
 
-    public class Simpanan implements Editableiface {
+public class Simpanan implements Editableiface {
     private String noAnggota;
     private String idSimpanan;
     private double jumlahSimpanan;
@@ -21,6 +16,16 @@ import java.util.ArrayList;
         catatan.add(new Catatan());
         catatan.get(0).set_jenisCatatan("Simpanan");
     }
+
+    public Simpanan(String noAnggota, String idSimpanan, double jumlahSimpanan, double simpananPokok, double simpananWajib) {
+        this.noAnggota = noAnggota;
+        this.idSimpanan = idSimpanan;
+        this.jumlahSimpanan = jumlahSimpanan;
+        this.simpananPokok = simpananPokok;
+        this.simpananWajib = simpananWajib;
+    }
+    
+        
 
     @Override
     public void simpan(String id, double jumlah)

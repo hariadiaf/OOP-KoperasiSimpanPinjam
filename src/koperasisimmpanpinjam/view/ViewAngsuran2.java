@@ -9,12 +9,12 @@ package koperasisimmpanpinjam.view;
  *
  * @author Hariadi Adha F
  */
-public class Angsuran2 extends javax.swing.JFrame {
+public class ViewAngsuran2 extends javax.swing.JFrame {
 
     /**
      * Creates new form Angsuran2
      */
-    public Angsuran2() {
+    public ViewAngsuran2() {
         initComponents();
     }
 
@@ -251,20 +251,21 @@ public class Angsuran2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Angsuran2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewAngsuran2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Angsuran2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewAngsuran2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Angsuran2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewAngsuran2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Angsuran2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewAngsuran2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Angsuran2().setVisible(true);
+                new ViewAngsuran2().setVisible(true);
             }
         });
     }

@@ -1,16 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package koperasisimmpanpinjam.model;
 
 public class Catatan {
     private String idCatatan;
     private String jenisCatatan;
     private String keuangan;
-    private String id;
+    
+//konstruktor
+    public Catatan(String idCatatan, String jenisCatatan, String keuangan) {
+        this.idCatatan = idCatatan;
+        this.jenisCatatan = jenisCatatan;
+        this.keuangan = keuangan;
+    }
 
+    public Catatan() {
+    }
+
+    
+//end konstruktor
     
     public String get_jenisCatatan(){
         return null;

@@ -13,8 +13,9 @@ import koperasisimmpanpinjam.model.Anggota;
 import koperasisimmpanpinjam.model.Angsuran;
 import koperasisimmpanpinjam.model.Catatan;
 import koperasisimmpanpinjam.model.Login;
+import koperasisimmpanpinjam.model.Pinjaman;
 import koperasisimmpanpinjam.model.Simpanan;
-import koperasisimmpanpinjam.view.Pinjaman;
+import koperasisimmpanpinjam.view.ViewPinjaman;
 
 public class Database {
     private Connection conn = null;
@@ -64,8 +65,125 @@ public class Database {
         }
         return cek;
     }//end manipulate
+    
+    public void loadAdmin() {
+        connect();
+        try {
+            String query = "SELECT * FROM admin";
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                admin.add(new Admin(rs.getString("id")));
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error : "+ex);
+        }
+        disconnect();
+    }
+    
+    public void loadAnggota() {
+        connect();
+        try {
+            String query = "SELECT * FROM anggota";
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                anggota.add(new Anggota(rs.getString("id_anggota"), rs.getString("nama_anggota"), rs.getString("alamat"), rs.getString("status"), rs.getString("tgl_lahir")));
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error : "+ex);
+        }
+        disconnect();
+    }
+    
+        public void loadAngsuran() {
+        connect();
+        try {
+            String query = "SELECT * FROM angsuran";
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                angsuran.add(new Angsuran(rs.getString("id_anggota"),rs.getString("id_angsuran"), rs.getDouble("banyak_pinjaman"), rs.getDouble("sisa_angsuran"), rs.getString("id_pinjaman"), rs.getFloat("bunga"), rs.getString("tgl_angsuran"), rs.getDouble("denda")));
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error : "+ex);
+        }
+        disconnect();
+    }
+        
+        public void loadCatatan() {
+        connect();
+        try {
+            String query = "SELECT * FROM catatan";
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                catatan.add(new Catatan(rs.getString("id_catatan"),rs.getString("jenis_catatan"),rs.getString("keuangan")));
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error : "+ex);
+        }
+        disconnect();
+    }
+        
+        public void loadLogin() {
+        connect();
+        try {
+            String query = "SELECT * FROM login";
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                login.add(new Login(rs.getString("id"),rs.getString("id_anggota"), rs.getString("password"), rs.getString("username")));
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error : "+ex);
+        }
+        disconnect();
+    }
 
+   public void loadPinjaman() {
+        connect();
+        try {
+            String query = "SELECT * FROM pinjaman";
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                pinjaman.add(new Pinjaman(rs.getString("id_anggota"),rs.getString("id_pinjaman"), rs.getDouble("jml_pinjaman"), rs.getString("durasi_pinjaman"), rs.getString("tgl_pinjaman"), rs.getFloat("bunga"), rs.getInt("angsuran")));
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error : "+ex);
+        }
+        disconnect();
+    }
+   
+   public void loadSimpanan() {
+        connect();
+        try {
+            String query = "SELECT * FROM simpanan";
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                simpanan.add(new Simpanan(rs.getString("id_anggota"),rs.getString("id_simpanan"), rs.getDouble("jml_simpanan"),rs.getDouble("simpanan_pokok"),rs.getDouble("simpanan_wajib")));
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error : "+ex);
+        }
+        disconnect();
+    }
+        
+        
     public ArrayList<Admin> getAdmin() {
         return admin;
+    }
+    public ArrayList<Anggota> getAnggota() {
+        return anggota;
+    }
+    public ArrayList<Angsuran> getAngsuran() {
+        return angsuran;
+    }
+    public ArrayList<Catatan> getCatatan() {
+        return catatan;
+    }
+    public ArrayList<Login> getLogin() {
+        return login;
+    }
+    public ArrayList<Pinjaman> getPinjaman() {
+        return pinjaman;
+    }
+    public ArrayList<Simpanan> getSimpanan() {
+        return simpanan;
     }
 }

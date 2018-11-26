@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package koperasisimmpanpinjam.model;
 
 
@@ -23,6 +18,17 @@ public class Angsuran implements Editableiface {
         this.catatan = new ArrayList<>();
         catatan.add(new Catatan());
         catatan.get(0).set_jenisCatatan("Angsuran");
+    }
+
+    public Angsuran(String noAnggota, String idAngsuran, double banyakPinjaman, double sisaAngsuran, String idPinjaman, float bunga, String tglAngsuran, double denda) {
+        this.noAnggota = noAnggota;
+        this.idAngsuran = idAngsuran;
+        this.banyakPinjaman = banyakPinjaman;
+        this.sisaAngsuran = sisaAngsuran;
+        this.idPinjaman = idPinjaman;
+        this.bunga = bunga;
+        this.tglAngsuran = tglAngsuran;
+        this.denda = denda;
     }
 
 

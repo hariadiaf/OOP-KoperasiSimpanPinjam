@@ -1,19 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package koperasisimmpanpinjam.model;
 
 public class Login {
-    private String id;
+    private String idAdmin;
+    private String noAnggota;
     private String pass;
     private String username;
+
+    public Login(String idAdmin, String noAnggota ,String pass, String username) {
+        this.idAdmin = idAdmin;
+        this.noAnggota = noAnggota;
+        this.pass = pass;
+        this.username = username;
+    }
+    
+    
     
     public void input(){
 
     };
-    public void login(){
+    public void masuk(){
 
     };
     
