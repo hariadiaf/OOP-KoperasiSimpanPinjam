@@ -23,12 +23,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+          <Component id="jPanel1" alignment="0" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+          <Component id="jPanel1" alignment="0" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -50,8 +50,8 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="txtSimpananWajib" min="-2" max="-2" attributes="0"/>
-                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtSimpananWajib" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jPanel3" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
               </Group>
@@ -61,11 +61,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="txtSimpananWajib" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="36" max="32767" attributes="0"/>
+                  <EmptySpace pref="45" max="32767" attributes="0"/>
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -101,27 +101,35 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtJmlWajib" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtKeterangan" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtTanggal1" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtDibayar" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="152" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="inputDibayar" min="-2" pref="784" max="-2" attributes="0"/>
-                          <Component id="inputTanggal1" min="-2" pref="784" max="-2" attributes="0"/>
-                          <Component id="inputKeterangan" min="-2" pref="784" max="-2" attributes="0"/>
-                          <Component id="inputJumlahWajib1" min="-2" pref="784" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btnBayar" min="-2" pref="148" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                      <Component id="btnBayarPokok" min="-2" pref="148" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="checkBoxSimpananPokok" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtJmlPokok" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtKeteranganPokok" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtTanggalPokok" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDibayarPokok" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="152" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="inputDibayarPokok" alignment="0" pref="784" max="32767" attributes="0"/>
+                                  <Component id="inputTanggalPokok" alignment="0" pref="784" max="32767" attributes="0"/>
+                                  <Component id="inputKeteranganPokok" alignment="0" pref="784" max="32767" attributes="0"/>
+                                  <Component id="inputJumlahPokok" alignment="0" pref="784" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -130,41 +138,43 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtJmlWajib" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="inputJumlahWajib1" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="txtTanggal1" min="-2" max="-2" attributes="0"/>
-                          <Component id="inputTanggal1" min="-2" pref="57" max="-2" attributes="0"/>
+                          <Component id="txtJmlPokok" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="inputJumlahPokok" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="inputDibayar" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                          <Component id="txtDibayar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="inputTanggalPokok" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                          <Component id="txtTanggalPokok" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="inputKeterangan" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                          <Component id="txtKeterangan" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="inputDibayarPokok" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                          <Component id="txtDibayarPokok" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                      <Component id="btnBayar" min="-2" pref="52" max="-2" attributes="0"/>
-                      <EmptySpace pref="66" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="inputKeteranganPokok" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                          <Component id="txtKeteranganPokok" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                      <Component id="checkBoxSimpananPokok" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="71" max="32767" attributes="0"/>
+                      <Component id="btnBayarPokok" min="-2" pref="52" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="txtJmlWajib">
+            <Component class="javax.swing.JLabel" name="txtJmlPokok">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Jumlah Wajib"/>
+                <Property name="text" type="java.lang.String" value="Jumlah"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="inputDibayar">
+            <Component class="javax.swing.JTextField" name="inputDibayarPokok">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
@@ -172,7 +182,7 @@
                 <Property name="text" type="java.lang.String" value="Rp.-"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txtDibayar">
+            <Component class="javax.swing.JLabel" name="txtDibayarPokok">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
@@ -180,7 +190,7 @@
                 <Property name="text" type="java.lang.String" value="Dibayar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="inputJumlahWajib1">
+            <Component class="javax.swing.JTextField" name="inputJumlahPokok">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
@@ -188,7 +198,7 @@
                 <Property name="text" type="java.lang.String" value="Rp.1.000.000,00"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txtTanggal1">
+            <Component class="javax.swing.JLabel" name="txtTanggalPokok">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
@@ -196,7 +206,7 @@
                 <Property name="text" type="java.lang.String" value="Tanggal"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="inputTanggal1">
+            <Component class="javax.swing.JTextField" name="inputTanggalPokok">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
@@ -204,7 +214,7 @@
                 <Property name="text" type="java.lang.String" value="DD/MM/YYYY"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txtKeterangan">
+            <Component class="javax.swing.JLabel" name="txtKeteranganPokok">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
@@ -212,7 +222,7 @@
                 <Property name="text" type="java.lang.String" value="Keterangan"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="inputKeterangan">
+            <Component class="javax.swing.JTextField" name="inputKeteranganPokok">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="32" style="0"/>
@@ -220,7 +230,7 @@
                 <Property name="text" type="java.lang.String" value="Keterangan"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnBayar">
+            <Component class="javax.swing.JButton" name="btnBayarPokok">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="0" red="66" type="rgb"/>
@@ -231,7 +241,18 @@
                 <Property name="text" type="java.lang.String" value="Bayar"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBayarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBayarPokokActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="checkBoxSimpananPokok">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Roboto" size="24" style="2"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Dengan ini saya menyatakan setuju dengan jumlah yang akan saya simpan"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checkBoxSimpananPokokActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -244,7 +265,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Simpanan Wajib"/>
+            <Property name="text" type="java.lang.String" value="Simpanan Pokok"/>
           </Properties>
         </Component>
       </SubComponents>

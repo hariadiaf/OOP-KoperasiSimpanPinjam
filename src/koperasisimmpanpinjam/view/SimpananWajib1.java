@@ -39,6 +39,7 @@ public class SimpananWajib1 extends javax.swing.JFrame {
         txtKeterangan = new javax.swing.JLabel();
         inputKeterangan = new javax.swing.JTextField();
         btnBayar = new javax.swing.JButton();
+        txtSimpananWajib = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -139,6 +140,10 @@ public class SimpananWajib1 extends javax.swing.JFrame {
                 .addContainerGap(66, Short.MAX_VALUE))
         );
 
+        txtSimpananWajib.setFont(new java.awt.Font("Roboto", 1, 64)); // NOI18N
+        txtSimpananWajib.setForeground(new java.awt.Color(255, 255, 255));
+        txtSimpananWajib.setText("Simpanan Wajib");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -148,14 +153,18 @@ public class SimpananWajib1 extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtSimpananWajib)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(72, 72, 72))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
+                .addComponent(txtSimpananWajib)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(89, 89, 89))
         );
@@ -225,6 +234,7 @@ public class SimpananWajib1 extends javax.swing.JFrame {
     private javax.swing.JLabel txtDibayar;
     private javax.swing.JLabel txtJmlWajib;
     private javax.swing.JLabel txtKeterangan;
+    private javax.swing.JLabel txtSimpananWajib;
     private javax.swing.JLabel txtTanggal1;
     // End of variables declaration//GEN-END:variables
 }
