@@ -42,7 +42,7 @@ public class Pinjaman extends javax.swing.JFrame {
         checkBoxPinjaman = new javax.swing.JCheckBox();
         cbText1 = new javax.swing.JLabel();
         cbText2 = new javax.swing.JLabel();
-        txtSimpananWajib = new javax.swing.JLabel();
+        txtPinjaman = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -181,9 +181,9 @@ public class Pinjaman extends javax.swing.JFrame {
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        txtSimpananWajib.setFont(new java.awt.Font("Roboto", 1, 64)); // NOI18N
-        txtSimpananWajib.setForeground(new java.awt.Color(255, 255, 255));
-        txtSimpananWajib.setText("Pinjaman");
+        txtPinjaman.setFont(new java.awt.Font("Roboto", 1, 64)); // NOI18N
+        txtPinjaman.setForeground(new java.awt.Color(255, 255, 255));
+        txtPinjaman.setText("Pinjaman");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -196,7 +196,7 @@ public class Pinjaman extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(txtSimpananWajib)
+                        .addComponent(txtPinjaman)
                         .addGap(55, 55, 55))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -207,7 +207,7 @@ public class Pinjaman extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
-                .addComponent(txtSimpananWajib)
+                .addComponent(txtPinjaman)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(109, Short.MAX_VALUE))
@@ -288,7 +288,7 @@ public class Pinjaman extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel txNamaPinjaman;
     private javax.swing.JLabel txtBesarPinjaman;
-    private javax.swing.JLabel txtSimpananWajib;
+    private javax.swing.JLabel txtPinjaman;
     private javax.swing.JLabel txtTglBayar;
     private javax.swing.JLabel txtTglPinjam;
     // End of variables declaration//GEN-END:variables

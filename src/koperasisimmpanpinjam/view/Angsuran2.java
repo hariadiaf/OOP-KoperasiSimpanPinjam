@@ -41,7 +41,7 @@ public class Angsuran2 extends javax.swing.JFrame {
         DeadlineAngsuran = new javax.swing.JTextField();
         checkBoxPinjaman = new javax.swing.JCheckBox();
         cbText1 = new javax.swing.JLabel();
-        txtSimpananWajib = new javax.swing.JLabel();
+        txtAngsuran = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -175,9 +175,9 @@ public class Angsuran2 extends javax.swing.JFrame {
                 .addGap(51, 51, 51))
         );
 
-        txtSimpananWajib.setFont(new java.awt.Font("Roboto", 1, 64)); // NOI18N
-        txtSimpananWajib.setForeground(new java.awt.Color(255, 255, 255));
-        txtSimpananWajib.setText("Pinjaman");
+        txtAngsuran.setFont(new java.awt.Font("Roboto", 1, 64)); // NOI18N
+        txtAngsuran.setForeground(new java.awt.Color(255, 255, 255));
+        txtAngsuran.setText("Angsuran");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -188,20 +188,17 @@ public class Angsuran2 extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(txtSimpananWajib)
-                        .addGap(55, 55, 55))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(132, 132, 132))))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtAngsuran)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(132, 132, 132))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
-                .addComponent(txtSimpananWajib)
+                .addComponent(txtAngsuran)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(129, Short.MAX_VALUE))
@@ -283,9 +280,9 @@ public class Angsuran2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel txtAngsuran;
     private javax.swing.JLabel txtBesarPinjaman;
     private javax.swing.JLabel txtJmlAngsur;
-    private javax.swing.JLabel txtSimpananWajib;
     private javax.swing.JLabel txtTglAngsuran;
     private javax.swing.JLabel txtTglDeadline;
     // End of variables declaration//GEN-END:variables
