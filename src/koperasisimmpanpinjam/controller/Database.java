@@ -191,16 +191,13 @@ public class Database {
     
     //DBAdd
     public void addAdmin(Admin staff){
-//        connect();
-//        String query = "INSERT INTO admin VALUES (";
-//        query += "'" + staff. + "',";
-//        query += "'" + m.getNama() + "',";
-//        query += "'" + m.getJurusan() + "',";
-//        query += "'" + m.getJk() + "'";
-//        query += ")";
-//        
-//        if (manipulate(query)) admin.add(m);
-//        disconnect();
+        connect();
+        String query = "INSERT INTO admin VALUES (";
+        query += "'" + staff.getIdAdmin() + "',";
+        query += ")";
+        
+        if (manipulate(query)) admin.add(staff);
+        disconnect();
     }
     
     public void addAnggota(Anggota member){
@@ -290,4 +287,147 @@ public class Database {
         disconnect();
     }
     
+    //DBDelete
+    
+    public void delAdmin(String idAdmin){
+        connect();
+        String query = "DELETE FROM admin WHERE id='" + idAdmin + "'";
+        if (manipulate(query)){
+            for (Admin adm : admin) {
+                if (adm.getIdAdmin().equals(idAdmin)){
+                    admin.remove(adm);
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+    
+    public void delAnggota(String noAnggota){
+        connect();
+        String query = "DELETE FROM anggota WHERE id='" + noAnggota + "'";
+        if (manipulate(query)){
+            for (Anggota angg : anggota) {
+                if (angg.getNoAnggota().equals(noAnggota)){
+                    admin.remove(angg);
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+    
+    public void delAngsuran(String idAngsuran){
+        connect();
+        String query = "DELETE FROM angsuran WHERE id='" + idAngsuran + "'";
+        if (manipulate(query)){
+            for (Angsuran angs : angsuran) {
+                if (angs.getIdAngsuran().equals(idAngsuran)){
+                    angsuran.remove(angs);
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+    
+    public void delCatatan(String idCatatan){
+        connect();
+        String query = "DELETE FROM catatan WHERE id='" + idCatatan + "'";
+        if (manipulate(query)){
+            for (Catatan note : catatan) {
+                if (note.getIdCatatan().equals(idCatatan)){
+                    catatan.remove(note);
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+    
+    public void delLogin( ){
+//        connect();
+//        String query = "DELETE FROM login WHERE id='" + idAdmin + "'";
+//        if (manipulate(query)){
+//            for (Admin adm : admin) {
+//                if (adm.getIdAdmin().equals(idAdmin)){
+//                    admin.remove(adm);
+//                    break;
+//                }
+//            }
+//        }
+//        disconnect();
+    }
+    
+    public void delPinjaman(String idPinjaman){
+        connect();
+        String query = "DELETE FROM pinjaman WHERE id='" + idPinjaman + "'";
+        if (manipulate(query)){
+            for (Pinjaman pinj : pinjaman) {
+                if (pinj.get_idPinjaman().equals(idPinjaman)){
+                    pinjaman.remove(pinj);
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+    
+    public void delSimpanan(String idSimpanan){
+        connect();
+        String query = "DELETE FROM simpanan WHERE id='" + idSimpanan + "'";
+        if (manipulate(query)){
+            for (Simpanan simp : simpanan) {
+                if (simp.getIdSimpanan().equals(idSimpanan)){
+                    simpanan.remove(simp);
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+    
+    public void updateAdmin(Admin adm){
+//        connect();
+//        String query = "UPDATE admin SET";
+//        query += " nama='" + adm.getNama() + "',";
+//        query += " jurusan='" + adm.getJurusan() + "',";
+//        query += " jk='" + adm.getJk() + "'";
+//        query += " WHERE nim='" + adm.getNim() + "'";
+//        if (manipulate(query)){
+//            for (Mahasiswa mhs : mahasiswa) {
+//                if (mhs.getNim().equals(m.getNim())){
+//                    mhs.setNama(m.getNama());
+//                    mhs.setJurusan(m.getJurusan());
+//                    mhs.setJk(m.getJk());
+//                    break;
+//                }
+//            }
+//        }
+//        disconnect();
+    }
+    
+    public void updateAnggota(){
+        
+    }
+    
+    public void updateAngsuran(){
+        
+    }
+    
+    public void updateCatatan(){
+        
+    }
+    
+    public void updateLogin(){
+        
+    }
+    
+    public void updatePinjaman(){
+        
+    }
+    
+    public void updateSimpanan(){
+        
+    }
 }

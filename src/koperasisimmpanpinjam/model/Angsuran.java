@@ -1,6 +1,5 @@
 package koperasisimmpanpinjam.model;
 
-
 import java.util.ArrayList;
 
 public class Angsuran implements Editableiface {
