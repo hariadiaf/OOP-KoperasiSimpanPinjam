@@ -204,36 +204,90 @@ public class Database {
     }
     
     public void addAnggota(Anggota member){
-//        connect();
-//        String query = "INSERT INTO anggota VALUES (";
-//        query += "'" + member.getNim() + "',";
-//        query += "'" + member.getNama() + "',";
-//        query += "'" + member.getJurusan() + "',";
-//        query += "'" + member.getJk() + "'";
-//        query += ")";
-//
-//        if (manipulate(query)) anggota.add(m);
-//        disconnect();
+        connect();
+        String query = "INSERT INTO anggota VALUES (";
+        query += "'" + member.getNoAnggota()+ "',";
+        query += "'" + member.getNamaAnggota() + "',";
+        query += "'" + member.getAlamat() + "',";
+        query += "'" + member.getStatus() + "'";
+        query += "'" + member.getTglLahir() + "'";     
+        query += ")";
+
+        if (manipulate(query)) anggota.add(member);
+        disconnect();
     }
     
     public void addAngsuran(Angsuran angs){
-        
+        connect();
+        String query = "INSERT INTO angsuran VALUES (";
+        query += "'" + angs.getIdAngsuran()+ "',";
+        query += "'" + angs.getBanyakPinjaman() + "',";
+        query += "'" + angs.getSisaAngsuran() + "',";
+        query += "'" + angs.getBunga() + "'";
+        query += "'" + angs.getTglAngsuran() + "'";   
+        query += "'" + angs.getDenda() + "'";
+        query += "'" + angs.getNoAnggota() + "'";
+        query += "'" + angs.getTglAngsuran() + "'";
+        query += "'" + angs.getIdPinjaman() + "'";
+        query += ")";
+
+        if (manipulate(query)) angsuran.add(angs);
+        disconnect();
     }
     
     public void addCatatan(Catatan note){
-        
+        connect();
+        String query = "INSERT INTO catatan VALUES (";
+        query += "'" + note.getIdCatatan()+ "',";
+        query += "'" + note.getJenisCatatan() + "',";
+        query += "'" + note.getKeuangan() + "',";
+        query += ")";
+
+        if (manipulate(query)) catatan.add(note);
+        disconnect();
     }
     
     public void addLogin(Login masuk){
-        
+        connect();
+        String query = "INSERT INTO login VALUES (";
+        query += "'" + masuk.getUsername()+ "',";
+        query += "'" + masuk.getPass() + "',";
+        query += "'" + masuk.getNoAnggota() + "',";
+        query += "'" + masuk.getIdAdmin() + "'";     
+        query += ")";
+
+        if (manipulate(query)) login.add(masuk);
+        disconnect();
     }
     
     public void addPinjaman(Pinjaman pinj){
-        
+        connect();
+        String query = "INSERT INTO pinjaman VALUES (";
+        query += "'" + pinj.get_idPinjaman()+ "',";
+        query += "'" + pinj.getJmlPinjaman() + "',";
+        query += "'" + pinj.getDurasiPinjaman() + "',";
+        query += "'" + pinj.getTglPinjaman() + "'";
+        query += "'" + pinj.getBunga() + "'"; 
+        query += "'" + pinj.getAngsuran() + "'"; 
+        query += "'" + pinj.getNoAnggota() + "'"; 
+        query += ")";
+
+        if (manipulate(query)) pinjaman.add(pinj);
+        disconnect();
     }
     
     public void addSimpanan(Simpanan simp){
-        
+        connect();
+        String query = "INSERT INTO pinjaman VALUES (";
+        query += "'" + simp.getIdSimpanan()+ "',";
+        query += "'" + simp.getJumlahSimpanan() + "',";
+        query += "'" + simp.getSimpananPokok() + "',";
+        query += "'" + simp.getSimpananWajib() + "'";
+        query += "'" + simp.getNoAnggota() + "'"; 
+        query += ")";
+
+        if (manipulate(query)) simpanan.add(simp);
+        disconnect();
     }
     
 }

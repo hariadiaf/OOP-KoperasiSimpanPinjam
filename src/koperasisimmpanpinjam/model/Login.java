@@ -12,6 +12,38 @@ public class Login {
         this.pass = pass;
         this.username = username;
     }
+
+    public String getIdAdmin() {
+        return idAdmin;
+    }
+
+    public void setIdAdmin(String idAdmin) {
+        this.idAdmin = idAdmin;
+    }
+
+    public String getNoAnggota() {
+        return noAnggota;
+    }
+
+    public void setNoAnggota(String noAnggota) {
+        this.noAnggota = noAnggota;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
     
     
     

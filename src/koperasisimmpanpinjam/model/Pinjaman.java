@@ -29,6 +29,62 @@ public class Pinjaman implements Editableiface{
         this.bunga = bunga;
         this.jmlAngsuran = jmlAngsuran;
     }
+
+    public String getNoAnggota() {
+        return noAnggota;
+    }
+
+    public void setNoAnggota(String noAnggota) {
+        this.noAnggota = noAnggota;
+    }
+
+    public double getJmlPinjaman() {
+        return jmlPinjaman;
+    }
+
+    public void setJmlPinjaman(double jmlPinjaman) {
+        this.jmlPinjaman = jmlPinjaman;
+    }
+
+    public String getDurasiPinjaman() {
+        return durasiPinjaman;
+    }
+
+    public void setDurasiPinjaman(String durasiPinjaman) {
+        this.durasiPinjaman = durasiPinjaman;
+    }
+
+    public String getTglPinjaman() {
+        return tglPinjaman;
+    }
+
+    public void setTglPinjaman(String tglPinjaman) {
+        this.tglPinjaman = tglPinjaman;
+    }
+
+    public float getBunga() {
+        return bunga;
+    }
+
+    public void setBunga(float bunga) {
+        this.bunga = bunga;
+    }
+
+    public Angsuran getAngsuran() {
+        return angsuran;
+    }
+
+    public void setAngsuran(Angsuran angsuran) {
+        this.angsuran = angsuran;
+    }
+
+    public int getJmlAngsuran() {
+        return jmlAngsuran;
+    }
+
+    public void setJmlAngsuran(int jmlAngsuran) {
+        this.jmlAngsuran = jmlAngsuran;
+    }
     
     
     

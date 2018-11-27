@@ -31,6 +31,79 @@ public class Angsuran implements Editableiface {
         this.denda = denda;
     }
 
+    public String getNoAnggota() {
+        return noAnggota;
+    }
+
+    public void setNoAnggota(String noAnggota) {
+        this.noAnggota = noAnggota;
+    }
+
+    public String getIdAngsuran() {
+        return idAngsuran;
+    }
+
+    public void setIdAngsuran(String idAngsuran) {
+        this.idAngsuran = idAngsuran;
+    }
+
+    public double getBanyakPinjaman() {
+        return banyakPinjaman;
+    }
+
+    public void setBanyakPinjaman(double banyakPinjaman) {
+        this.banyakPinjaman = banyakPinjaman;
+    }
+
+    public double getSisaAngsuran() {
+        return sisaAngsuran;
+    }
+
+    public void setSisaAngsuran(double sisaAngsuran) {
+        this.sisaAngsuran = sisaAngsuran;
+    }
+
+    public String getIdPinjaman() {
+        return idPinjaman;
+    }
+
+    public void setIdPinjaman(String idPinjaman) {
+        this.idPinjaman = idPinjaman;
+    }
+
+    public float getBunga() {
+        return bunga;
+    }
+
+    public void setBunga(float bunga) {
+        this.bunga = bunga;
+    }
+
+    public String getTglAngsuran() {
+        return tglAngsuran;
+    }
+
+    public void setTglAngsuran(String tglAngsuran) {
+        this.tglAngsuran = tglAngsuran;
+    }
+
+    public double getDenda() {
+        return denda;
+    }
+
+    public void setDenda(double denda) {
+        this.denda = denda;
+    }
+
+    public ArrayList<Catatan> getCatatan() {
+        return catatan;
+    }
+
+    public void setCatatan(ArrayList<Catatan> catatan) {
+        this.catatan = catatan;
+    }
+
+    
 
     @Override
     public void simpan(String id, double jumlah) {

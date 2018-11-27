@@ -15,6 +15,22 @@ public class Catatan {
     public Catatan() {
     }
 
+    public String getJenisCatatan() {
+        return jenisCatatan;
+    }
+
+    public void setJenisCatatan(String jenisCatatan) {
+        this.jenisCatatan = jenisCatatan;
+    }
+
+    public String getKeuangan() {
+        return keuangan;
+    }
+
+    public void setKeuangan(String keuangan) {
+        this.keuangan = keuangan;
+    }
+
     
 //end konstruktor
     

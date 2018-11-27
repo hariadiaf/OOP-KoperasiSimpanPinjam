@@ -24,6 +24,46 @@ public class Simpanan implements Editableiface {
         this.simpananPokok = simpananPokok;
         this.simpananWajib = simpananWajib;
     }
+
+    public String getNoAnggota() {
+        return noAnggota;
+    }
+
+    public void setNoAnggota(String noAnggota) {
+        this.noAnggota = noAnggota;
+    }
+
+    public String getIdSimpanan() {
+        return idSimpanan;
+    }
+
+    public void setIdSimpanan(String idSimpanan) {
+        this.idSimpanan = idSimpanan;
+    }
+
+    public double getJumlahSimpanan() {
+        return jumlahSimpanan;
+    }
+
+    public void setJumlahSimpanan(double jumlahSimpanan) {
+        this.jumlahSimpanan = jumlahSimpanan;
+    }
+
+    public double getSimpananPokok() {
+        return simpananPokok;
+    }
+
+    public void setSimpananPokok(double simpananPokok) {
+        this.simpananPokok = simpananPokok;
+    }
+
+    public double getSimpananWajib() {
+        return simpananWajib;
+    }
+
+    public void setSimpananWajib(double simpananWajib) {
+        this.simpananWajib = simpananWajib;
+    }
     
         
 
