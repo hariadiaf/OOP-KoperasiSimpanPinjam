@@ -80,6 +80,7 @@ public class Database {
         disconnect();
     }
     
+    //DBLoad
     public void loadAnggota() {
         connect();
         try {
@@ -163,8 +164,9 @@ public class Database {
         }
         disconnect();
     }
-        
-        
+   
+   //End DBLoad
+   
     public ArrayList<Admin> getAdmin() {
         return admin;
     }
@@ -186,4 +188,52 @@ public class Database {
     public ArrayList<Simpanan> getSimpanan() {
         return simpanan;
     }
+    
+    //DBAdd
+    public void addAdmin(Admin staff){
+//        connect();
+//        String query = "INSERT INTO admin VALUES (";
+//        query += "'" + staff. + "',";
+//        query += "'" + m.getNama() + "',";
+//        query += "'" + m.getJurusan() + "',";
+//        query += "'" + m.getJk() + "'";
+//        query += ")";
+//        
+//        if (manipulate(query)) admin.add(m);
+//        disconnect();
+    }
+    
+    public void addAnggota(Anggota member){
+//        connect();
+//        String query = "INSERT INTO anggota VALUES (";
+//        query += "'" + member.getNim() + "',";
+//        query += "'" + member.getNama() + "',";
+//        query += "'" + member.getJurusan() + "',";
+//        query += "'" + member.getJk() + "'";
+//        query += ")";
+//
+//        if (manipulate(query)) anggota.add(m);
+//        disconnect();
+    }
+    
+    public void addAngsuran(Angsuran angs){
+        
+    }
+    
+    public void addCatatan(Catatan note){
+        
+    }
+    
+    public void addLogin(Login masuk){
+        
+    }
+    
+    public void addPinjaman(Pinjaman pinj){
+        
+    }
+    
+    public void addSimpanan(Simpanan simp){
+        
+    }
+    
 }

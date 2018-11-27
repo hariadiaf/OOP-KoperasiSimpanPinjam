@@ -16,7 +16,6 @@ public class Anggota {
     }
     
     
-    
     public void menyimpan(){
 
     };
