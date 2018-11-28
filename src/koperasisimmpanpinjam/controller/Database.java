@@ -386,7 +386,88 @@ public class Database {
         }
         disconnect();
     }
+    //endDelete
     
+    //DBCheckPK
+    public boolean cekDuplikatIdAdmin(String idAdmin){
+        boolean cek = false;
+        for (Admin adm : admin) {
+            if (adm.getIdAdmin().equals(idAdmin)){
+                cek = true;
+                break;
+            }
+        }
+        return cek;
+    }
+    
+    public boolean cekDuplikatNoAnggota(String noAnggota){
+        boolean cek = false;
+        for (Anggota member : anggota) {
+            if (member.getNoAnggota().equals(noAnggota)){
+                cek = true;
+                break;
+            }
+        }
+        return cek;
+    }
+    
+    public boolean cekDuplikatIdAngsuran(String idAngsuran){
+        boolean cek = false;
+        for (Angsuran angs : angsuran) {
+            if (angs.getIdAngsuran().equals(idAngsuran)){
+                cek = true;
+                break;
+            }
+        }
+        return cek;
+    }
+    
+    public boolean cekDuplikatIdCatatan(String idCatatan){
+        boolean cek = false;
+        for (Catatan note : catatan) {
+            if (note.getIdCatatan().equals(idCatatan)){
+                cek = true;
+                break;
+            }
+        }
+        return cek;
+    }
+    
+    public boolean cekDuplikatUsername(String username){
+        boolean cek = false;
+        for (Login log : login) {
+            if (log.getUsername().equals(username)){
+                cek = true;
+                break;
+            }
+        }
+        return cek;
+    }
+    
+    public boolean cekDuplikatIdPinjaman(String idPinjaman){
+        boolean cek = false;
+        for (Pinjaman pinj : pinjaman) {
+            if (pinj.get_idPinjaman().equals(idPinjaman)){
+                cek = true;
+                break;
+            }
+        }
+        return cek;
+    }
+    
+    public boolean cekDuplikatIdSimpanan(String idSimpanan){
+        boolean cek = false;
+        for (Simpanan simp : simpanan) {
+            if (simp.getIdSimpanan().equals(idSimpanan)){
+                cek = true;
+                break;
+            }
+        }
+        return cek;
+    }
+    //endCheckPK
+    
+    //DBUpdate
     public void updateAdmin(Admin adm){
         connect();
         String query = "UPDATE admin SET";
