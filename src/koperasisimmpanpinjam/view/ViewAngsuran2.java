@@ -5,6 +5,8 @@
  */
 package koperasisimmpanpinjam.view;
 
+import javax.swing.JTextField;
+
 /**
  *
  * @author Hariadi Adha F
@@ -287,4 +289,14 @@ public class ViewAngsuran2 extends javax.swing.JFrame {
     private javax.swing.JLabel txtTglAngsuran;
     private javax.swing.JLabel txtTglDeadline;
     // End of variables declaration//GEN-END:variables
+
+    public String getDeadlineAngsuran() {
+        return DeadlineAngsuran.getText();
+    }
+
+    public void setDeadlineAngsuran(String DeadlineAngsuran) {
+        this.DeadlineAngsuran.setText(DeadlineAngsuran);
+    }
+
+
 }

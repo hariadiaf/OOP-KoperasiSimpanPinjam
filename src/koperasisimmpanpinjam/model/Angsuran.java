@@ -1,6 +1,7 @@
 package koperasisimmpanpinjam.model;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Angsuran implements Editableiface {
     private String noAnggota;
@@ -9,7 +10,7 @@ public class Angsuran implements Editableiface {
     private double sisaAngsuran;
     private String idPinjaman;
     private float bunga;
-    private String tglAngsuran;
+    private Date tglAngsuran;
     private double denda;
     private ArrayList<Catatan> catatan;
     
@@ -19,7 +20,7 @@ public class Angsuran implements Editableiface {
         catatan.get(0).set_jenisCatatan("Angsuran");
     }
 
-    public Angsuran(String noAnggota, String idAngsuran, double banyakPinjaman, double sisaAngsuran, String idPinjaman, float bunga, String tglAngsuran, double denda) {
+    public Angsuran(String noAnggota, String idAngsuran, double banyakPinjaman, double sisaAngsuran, String idPinjaman, float bunga, Date tglAngsuran, double denda) {
         this.noAnggota = noAnggota;
         this.idAngsuran = idAngsuran;
         this.banyakPinjaman = banyakPinjaman;
@@ -78,11 +79,11 @@ public class Angsuran implements Editableiface {
         this.bunga = bunga;
     }
 
-    public String getTglAngsuran() {
+    public Date getTglAngsuran() {
         return tglAngsuran;
     }
 
-    public void setTglAngsuran(String tglAngsuran) {
+    public void setTglAngsuran(Date tglAngsuran) {
         this.tglAngsuran = tglAngsuran;
     }
 

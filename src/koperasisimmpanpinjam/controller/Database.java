@@ -56,6 +56,7 @@ public class Database {
     }//end disconect
     
     public boolean manipulate(String query){
+        System.out.println("QUERY : "+query);
         boolean cek = false;
         try {
             int rows = stmt.executeUpdate(query);
@@ -87,7 +88,7 @@ public class Database {
             String query = "SELECT * FROM anggota";
             rs = stmt.executeQuery(query);
             while (rs.next()){
-                anggota.add(new Anggota(rs.getString("id_anggota"), rs.getString("nama_anggota"), rs.getString("alamat"), rs.getString("status"), rs.getString("tgl_lahir")));
+                anggota.add(new Anggota(rs.getString("id_anggota"), rs.getString("nama_anggota"), rs.getString("alamat"), rs.getString("status"), rs.getDate("tgl_lahir")));
             }
         } catch (SQLException ex) {
             System.out.println("Error : "+ex);
@@ -101,7 +102,7 @@ public class Database {
             String query = "SELECT * FROM angsuran";
             rs = stmt.executeQuery(query);
             while (rs.next()){
-                angsuran.add(new Angsuran(rs.getString("id_anggota"),rs.getString("id_angsuran"), rs.getDouble("banyak_pinjaman"), rs.getDouble("sisa_angsuran"), rs.getString("id_pinjaman"), rs.getFloat("bunga"), rs.getString("tgl_angsuran"), rs.getDouble("denda")));
+                angsuran.add(new Angsuran(rs.getString("id_anggota"),rs.getString("id_angsuran"), rs.getDouble("banyak_pinjaman"), rs.getDouble("sisa_angsuran"), rs.getString("id_pinjaman"), rs.getFloat("bunga"), rs.getDate("tgl_angsuran"), rs.getDouble("denda")));
             }
         } catch (SQLException ex) {
             System.out.println("Error : "+ex);
@@ -193,7 +194,7 @@ public class Database {
     public void addAdmin(Admin staff){
         connect();
         String query = "INSERT INTO admin VALUES (";
-        query += "'" + staff.getIdAdmin() + "',";
+        query += "'" + staff.getIdAdmin() + "'";
         query += ")";
         
         if (manipulate(query)) admin.add(staff);
@@ -206,7 +207,7 @@ public class Database {
         query += "'" + member.getNoAnggota()+ "',";
         query += "'" + member.getNamaAnggota() + "',";
         query += "'" + member.getAlamat() + "',";
-        query += "'" + member.getStatus() + "'";
+        query += "'" + member.getStatus() + "',";
         query += "'" + member.getTglLahir() + "'";     
         query += ")";
 
@@ -220,11 +221,10 @@ public class Database {
         query += "'" + angs.getIdAngsuran()+ "',";
         query += "'" + angs.getBanyakPinjaman() + "',";
         query += "'" + angs.getSisaAngsuran() + "',";
-        query += "'" + angs.getBunga() + "'";
-        query += "'" + angs.getTglAngsuran() + "'";   
-        query += "'" + angs.getDenda() + "'";
-        query += "'" + angs.getNoAnggota() + "'";
-        query += "'" + angs.getTglAngsuran() + "'";
+        query += "'" + angs.getBunga() + "',";
+        query += "'" + angs.getTglAngsuran() + "',";   
+        query += "'" + angs.getDenda() + "',";
+        query += "'" + angs.getNoAnggota() + "',";
         query += "'" + angs.getIdPinjaman() + "'";
         query += ")";
 
@@ -237,7 +237,7 @@ public class Database {
         String query = "INSERT INTO catatan VALUES (";
         query += "'" + note.getIdCatatan()+ "',";
         query += "'" + note.getJenisCatatan() + "',";
-        query += "'" + note.getKeuangan() + "',";
+        query += "'" + note.getKeuangan() + "'";
         query += ")";
 
         if (manipulate(query)) catatan.add(note);
@@ -263,9 +263,9 @@ public class Database {
         query += "'" + pinj.get_idPinjaman()+ "',";
         query += "'" + pinj.getJmlPinjaman() + "',";
         query += "'" + pinj.getDurasiPinjaman() + "',";
-        query += "'" + pinj.getTglPinjaman() + "'";
-        query += "'" + pinj.getBunga() + "'"; 
-        query += "'" + pinj.getAngsuran() + "'"; 
+        query += "'" + pinj.getTglPinjaman() + "',";
+        query += "'" + pinj.getBunga() + "',"; 
+        query += "'" + pinj.getAngsuran() + "',"; 
         query += "'" + pinj.getNoAnggota() + "'"; 
         query += ")";
 
@@ -279,7 +279,7 @@ public class Database {
         query += "'" + simp.getIdSimpanan()+ "',";
         query += "'" + simp.getJumlahSimpanan() + "',";
         query += "'" + simp.getSimpananPokok() + "',";
-        query += "'" + simp.getSimpananWajib() + "'";
+        query += "'" + simp.getSimpananWajib() + "',";
         query += "'" + simp.getNoAnggota() + "'"; 
         query += ")";
 

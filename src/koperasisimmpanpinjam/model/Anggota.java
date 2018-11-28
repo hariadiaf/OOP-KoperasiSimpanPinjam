@@ -1,13 +1,15 @@
 package koperasisimmpanpinjam.model;
 
+import java.sql.Date;
+
 public class Anggota {
     private String noAnggota;
     private String namaAnggota;
     private String Alamat;
     private String Status;
-    private String TglLahir;
+    private Date TglLahir;
 
-    public Anggota(String noAnggota, String namaAnggota, String Alamat, String Status, String TglLahir) {
+    public Anggota(String noAnggota, String namaAnggota, String Alamat, String Status, Date TglLahir) {
         this.noAnggota = noAnggota;
         this.namaAnggota = namaAnggota;
         this.Alamat = Alamat;
@@ -47,11 +49,11 @@ public class Anggota {
         this.Status = Status;
     }
 
-    public String getTglLahir() {
+    public Date getTglLahir() {
         return TglLahir;
     }
 
-    public void setTglLahir(String TglLahir) {
+    public void setTglLahir(Date TglLahir) {
         this.TglLahir = TglLahir;
     }
     
