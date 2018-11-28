@@ -345,18 +345,18 @@ public class Database {
         disconnect();
     }
     
-    public void delLogin( ){
-//        connect();
-//        String query = "DELETE FROM login WHERE id='" + idAdmin + "'";
-//        if (manipulate(query)){
-//            for (Admin adm : admin) {
-//                if (adm.getIdAdmin().equals(idAdmin)){
-//                    admin.remove(adm);
-//                    break;
-//                }
-//            }
-//        }
-//        disconnect();
+    public void delLogin(String username){
+        connect();
+        String query = "DELETE FROM login WHERE username='" + username + "'";
+        if (manipulate(query)){
+            for (Login log : login) {
+                if (log.getUsername().equals(username)){
+                    login.remove(log);
+                    break;
+                }
+            }
+        }
+        disconnect();
     }
     
     public void delPinjaman(String idPinjaman){
@@ -388,46 +388,158 @@ public class Database {
     }
     
     public void updateAdmin(Admin adm){
-//        connect();
-//        String query = "UPDATE admin SET";
-//        query += " nama='" + adm.getNama() + "',";
-//        query += " jurusan='" + adm.getJurusan() + "',";
-//        query += " jk='" + adm.getJk() + "'";
-//        query += " WHERE nim='" + adm.getNim() + "'";
-//        if (manipulate(query)){
-//            for (Mahasiswa mhs : mahasiswa) {
-//                if (mhs.getNim().equals(m.getNim())){
-//                    mhs.setNama(m.getNama());
-//                    mhs.setJurusan(m.getJurusan());
-//                    mhs.setJk(m.getJk());
-//                    break;
-//                }
-//            }
-//        }
-//        disconnect();
+        connect();
+        String query = "UPDATE admin SET";
+        query += " WHERE id_admin ='" + adm.getIdAdmin() + "',";
+        if (manipulate(query)){
+            for (Admin admin : admin) {
+                if (admin.getIdAdmin().equals(adm.getIdAdmin())){
+                    break;
+                }
+            }
+        }
+        disconnect();
     }
     
-    public void updateAnggota(){
+    public void updateAnggota(Anggota member){
+        connect();
+        String query = "UPDATE anggota SET";
+        query += " nama_anggota='" + member.getNamaAnggota()+ "',";
+        query += " alamat='" + member.getAlamat()+ "',";
+        query += " status='" + member.getStatus()+ "'";
+        query += " tgl_lahir='" + member.getTglLahir()+ "'";
+        query += " WHERE id_anggota='" + member.getNoAnggota()+ "'";
         
+        if (manipulate(query)){
+            for (Anggota angg : anggota) {
+                if (angg.getNoAnggota().equals(member.getNoAnggota())){
+                    angg.setNamaAnggota(member.getNamaAnggota());
+                    angg.setAlamat(member.getAlamat());
+                    angg.setStatus(member.getStatus());
+                    angg.setTglLahir(member.getTglLahir());
+                    break;
+                }
+            }
+        }
+        disconnect();
     }
     
-    public void updateAngsuran(){
+    public void updateAngsuran(Angsuran angs){
+        connect();
+        String query = "UPDATE angsuran SET";
+        query += " banyak_pinjaman='" + angs.getBanyakPinjaman()+ "',";
+        query += " sisa_angsuran='" + angs.getSisaAngsuran()+ "',";
+        query += " bunga='" + angs.getBunga()+ "'";
+        query += " tgl_angsuran='" + angs.getTglAngsuran()+ "'";
+        query += " denda='" + angs.getDenda()+ "'";
+        query += " id_anggota='" + angs.getNoAnggota()+ "'";
+        query += " id_pinjaman='" + angs.getIdPinjaman()+ "'";
+        query += " WHERE id_angsuran='" + angs.getIdAngsuran()+ "'";
         
+        if (manipulate(query)){
+            for (Angsuran angs2 : angsuran) {
+                if (angs2.getIdAngsuran().equals(angs.getIdAngsuran())){
+                    angs2.setBanyakPinjaman(angs.getBanyakPinjaman());
+                    angs2.setSisaAngsuran(angs.getSisaAngsuran());
+                    angs2.setBunga(angs.getBunga());
+                    angs2.setTglAngsuran(angs.getTglAngsuran());
+                    angs2.setDenda(angs.getDenda());
+                    angs2.setNoAnggota(angs.getNoAnggota());
+                    angs2.setIdPinjaman(angs.getIdPinjaman());
+                    break;
+                }
+            }
+        }
+        disconnect();
     }
     
-    public void updateCatatan(){
+    public void updateCatatan(Catatan note){
+        connect();
+        String query = "UPDATE catatan SET";
+        query += " jenis_catatan='" + note.get_jenisCatatan()+ "',";
+        query += " keuangan='" + note.getKeuangan()+ "',";
+        query += " WHERE id_catatan='" + note.getIdCatatan()+ "'";
         
+        if (manipulate(query)){
+            for (Catatan notes : catatan) {
+                if (notes.getIdCatatan().equals(note.getIdCatatan())){
+                    notes.setJenisCatatan(note.getJenisCatatan());
+                    notes.setKeuangan(note.getKeuangan());
+                    break;
+                }
+            }
+        }
+        disconnect();
     }
     
-    public void updateLogin(){
+    public void updateLogin(Login masuk){
+        connect();
+        String query = "UPDATE login SET";
+        query += " password='" + masuk.getPass()+ "',";
+        query += " id_anggota='" + masuk.getNoAnggota()+ "',";
+        query += " id='" + masuk.getIdAdmin()+ "',";
+        query += " WHERE username='" + masuk.getUsername()+ "'";
         
+        if (manipulate(query)){
+            for (Login in : login) {
+                if (in.getUsername().equals(masuk.getUsername())){
+                    in.setPass(masuk.getPass());
+                    in.setNoAnggota(masuk.getNoAnggota());
+                    in.setIdAdmin(masuk.getIdAdmin());
+                    break;
+                }
+            }
+        }
+        disconnect();
     }
     
-    public void updatePinjaman(){
+    public void updatePinjaman(Pinjaman pinj){
+        connect();
+        String query = "UPDATE pinjaman SET";
+        query += " jml_pinjaman='" + pinj.getJmlPinjaman()+ "',";
+        query += " durasi_pinjaman='" + pinj.getDurasiPinjaman()+ "',";
+        query += " tgl_pinjaman='" + pinj.getTglPinjaman()+ "'";
+        query += " bunga='" + pinj.getBunga()+ "'";
+        query += " angsuran='" + pinj.getAngsuran()+ "'";
+        query += " id_anggota='" + pinj.getNoAnggota()+ "'";
+        query += " WHERE id_pinjaman='" + pinj.get_idPinjaman()+ "'";
         
+        if (manipulate(query)){
+            for (Pinjaman pinjam : pinjaman) {
+                if (pinjam.get_idPinjaman().equals(pinj.get_idPinjaman())){
+                    pinjam.setJmlPinjaman(pinj.getJmlPinjaman());
+                    pinjam.setDurasiPinjaman(pinj.getDurasiPinjaman());
+                    pinjam.setTglPinjaman(pinj.getTglPinjaman());
+                    pinjam.setBunga(pinj.getBunga());
+                    pinjam.setAngsuran(pinj.getAngsuran());
+                    pinjam.setNoAnggota(pinj.getNoAnggota());
+                    break;
+                }
+            }
+        }
+        disconnect();
     }
     
-    public void updateSimpanan(){
+    public void updateSimpanan(Simpanan simp){
+        connect();
+        String query = "UPDATE simpanan SET";
+        query += " jml_simpanan='" + simp.getJumlahSimpanan()+ "',";
+        query += " simpanan_pokok='" + simp.getSimpananPokok()+ "',";
+        query += " simpanan_wajib='" + simp.getSimpananWajib()+ "'";
+        query += " id_anggota='" + simp.getNoAnggota()+ "'";
+        query += " WHERE id_simpanan='" + simp.getIdSimpanan()+ "'";
         
+        if (manipulate(query)){
+            for (Simpanan simpan : simpanan) {
+                if (simpan.getIdSimpanan().equals(simp.getIdSimpanan())){
+                    simpan.setJumlahSimpanan(simp.getJumlahSimpanan());
+                    simpan.setSimpananPokok(simp.getSimpananPokok());
+                    simpan.setSimpananWajib(simp.getSimpananWajib());
+                    simpan.setNoAnggota(simp.getNoAnggota());
+                    break;
+                }
+            }
+        }
+        disconnect();
     }
 }
