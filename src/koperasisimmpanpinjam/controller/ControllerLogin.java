@@ -7,32 +7,19 @@ import java.awt.event.MouseListener;
 import koperasisimmpanpinjam.model.Login;
 import koperasisimmpanpinjam.view.ViewLoginKoperasi;
 
-public class ControllerLogin implements ActionListener{
+public class ControllerLogin extends Database{
     private ViewLoginKoperasi view;
-    private Database db;
 
-    public ControllerLogin(){
-        view = new ViewLoginKoperasi();
-        db = new Database();
-        view.addActionListener(this);
-        view.setVisible(true);
-        
+    public ControllerLogin(ViewLoginKoperasi view){
+        this.view = view;
+        this.view.addLoginListener(new ActionListener() {  //buat anonymous class dengan menginstansiasi actionListener baru !!!!!!
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                
+            }
+        }); 
     }
    
-
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-        Object source = ae.getSource();
-        if (source.equals(view.getBtnLogin())){
-            BtnLoginActionPerformed();
-        }
-    }
-
-    private void BtnLoginActionPerformed() {
-//        Database db = new Database();
-//        db.
-    }
-    
     
 }
 
