@@ -1,5 +1,6 @@
 package koperasisimmpanpinjam.model;
 
+import java.sql.Date;
 import java.util.ArrayList;
 
 public class Pinjaman implements Editableiface{
@@ -7,28 +8,29 @@ public class Pinjaman implements Editableiface{
     private String idPinjaman;
     private double jmlPinjaman;
     private String durasiPinjaman;
-    private String tglPinjaman;
+    private Date tglPinjaman;
     private float bunga;
     private ArrayList<Catatan> catatan;
-    private Angsuran angsuran;
+    private int angsuran;
     private int jmlAngsuran;
     
     public void pinjaman(){
         this.catatan = new ArrayList<>();
         catatan.add(new Catatan());
         catatan.get(0).set_jenisCatatan("Pinjaman");
-        this.angsuran = new Angsuran();
     };
 
-    public Pinjaman(String noAnggota, String idPinjaman, double jmlPinjaman, String durasiPinjaman, String tglPinjaman, float bunga, int jmlAngsuran) {
+    public Pinjaman(String noAnggota, String idPinjaman, double jmlPinjaman, String durasiPinjaman, Date tglPinjaman, float bunga, int angsuran) {
         this.noAnggota = noAnggota;
         this.idPinjaman = idPinjaman;
         this.jmlPinjaman = jmlPinjaman;
         this.durasiPinjaman = durasiPinjaman;
         this.tglPinjaman = tglPinjaman;
         this.bunga = bunga;
-        this.jmlAngsuran = jmlAngsuran;
+        this.angsuran = angsuran;
     }
+
+   
 
     public String getNoAnggota() {
         return noAnggota;
@@ -54,11 +56,11 @@ public class Pinjaman implements Editableiface{
         this.durasiPinjaman = durasiPinjaman;
     }
 
-    public String getTglPinjaman() {
+    public Date getTglPinjaman() {
         return tglPinjaman;
     }
 
-    public void setTglPinjaman(String tglPinjaman) {
+    public void setTglPinjaman(Date tglPinjaman) {
         this.tglPinjaman = tglPinjaman;
     }
 
@@ -70,27 +72,17 @@ public class Pinjaman implements Editableiface{
         this.bunga = bunga;
     }
 
-    public Angsuran getAngsuran() {
+    public int getAngsuran() {
         return angsuran;
     }
 
-    public void setAngsuran(Angsuran angsuran) {
+    public void setAngsuran(int angsuran) {
         this.angsuran = angsuran;
     }
-
-    public int getJmlAngsuran() {
-        return jmlAngsuran;
-    }
-
-    public void setJmlAngsuran(int jmlAngsuran) {
-        this.jmlAngsuran = jmlAngsuran;
-    }
-    
-    
     
     public String get_idPinjaman(){
         //PLACEHOLDER
-        return null;
+        return idPinjaman;
     }
     
     public void set_idPinjaman(String idPinjaman){

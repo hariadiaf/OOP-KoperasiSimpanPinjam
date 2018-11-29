@@ -144,7 +144,7 @@ public class Database {
             String query = "SELECT * FROM pinjaman";
             rs = stmt.executeQuery(query);
             while (rs.next()){
-                pinjaman.add(new Pinjaman(rs.getString("id_anggota"),rs.getString("id_pinjaman"), rs.getDouble("jml_pinjaman"), rs.getString("durasi_pinjaman"), rs.getString("tgl_pinjaman"), rs.getFloat("bunga"), rs.getInt("angsuran")));
+                pinjaman.add(new Pinjaman(rs.getString("id_anggota"),rs.getString("id_pinjaman"), rs.getDouble("jml_pinjaman"), rs.getString("durasi_pinjaman"), rs.getDate("tgl_pinjaman"), rs.getFloat("bunga"), rs.getInt("angsuran")));
             }
         } catch (SQLException ex) {
             System.out.println("Error : "+ex);

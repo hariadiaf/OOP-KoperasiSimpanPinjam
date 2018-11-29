@@ -1,4 +1,4 @@
-package koperasisimmpanpinjam.model;
+    package koperasisimmpanpinjam.model;
 
 import java.util.ArrayList;
 import java.util.Date;
