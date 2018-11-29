@@ -623,4 +623,18 @@ public class Database {
         }
         disconnect();
     }
+    
+    public String doLogin(String username, String password){
+//     connect();
+//        try {
+//            String query = "SELECT * FROM login WHERE Username = '"+username+"' AND Password = '"+password;
+//            rs = stmt.executeQuery(query);
+//            while (rs.next()){
+//            }
+//        } catch (SQLException ex) {
+//            System.out.println("Error : "+ex);
+//        }
+//        disconnect();
+        return "";   
+    }
 }

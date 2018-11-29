@@ -11,13 +11,7 @@ public class ViewLoginKoperasi extends javax.swing.JFrame {
         initComponents();
     }
 
-    public ViewLoginKoperasi() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
-    public ViewLoginKoperasi() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 
     @SuppressWarnings("unchecked")
@@ -31,7 +25,7 @@ public class ViewLoginKoperasi extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         InputUsername = new javax.swing.JTextPane();
         InputPassword = new javax.swing.JTextField();
-        bntLogin = new javax.swing.JButton();
+        btnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,13 +60,13 @@ public class ViewLoginKoperasi extends javax.swing.JFrame {
             }
         });
 
-        bntLogin.setBackground(new java.awt.Color(68, 112, 177));
-        bntLogin.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
-        bntLogin.setForeground(new java.awt.Color(255, 255, 255));
-        bntLogin.setText("Login");
-        bntLogin.addActionListener(new java.awt.event.ActionListener() {
+        btnLogin.setBackground(new java.awt.Color(68, 112, 177));
+        btnLogin.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogin.setText("Login");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bntLoginActionPerformed(evt);
+                btnLoginActionPerformed(evt);
             }
         });
 
@@ -96,7 +90,7 @@ public class ViewLoginKoperasi extends javax.swing.JFrame {
                         .addGap(190, 190, 190))))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(153, 153, 153)
-                .addComponent(bntLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -111,7 +105,7 @@ public class ViewLoginKoperasi extends javax.swing.JFrame {
                 .addGap(46, 46, 46)
                 .addComponent(InputPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(51, 51, 51)
-                .addComponent(bntLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(58, Short.MAX_VALUE))
         );
 
@@ -148,9 +142,9 @@ public class ViewLoginKoperasi extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bntLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntLoginActionPerformed
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bntLoginActionPerformed
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     private void InputPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputPasswordActionPerformed
         // TODO add your handling code here:
@@ -192,7 +186,7 @@ public class ViewLoginKoperasi extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField InputPassword;
     private javax.swing.JTextPane InputUsername;
-    private javax.swing.JButton bntLogin;
+    private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
@@ -216,16 +210,16 @@ public class ViewLoginKoperasi extends javax.swing.JFrame {
         this.InputUsername.setText(InputUsername);
     }
 
-    public String getBntLogin() {
-        return bntLogin.getText();
+    public String getBtnLogin() {
+        return btnLogin.getText();
     }
 
-    public void setBntLogin(String bntLogin) {
-        this.bntLogin.setText(bntLogin);
+    public void setBtnLogin(String bntLogin) {
+        this.btnLogin.setText(bntLogin);
     }
     
      public void addActionListener(ActionListener x){
-        bntLogin.addActionListener(x);
+        btnLogin.addActionListener(x);
       
     }
 

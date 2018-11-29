@@ -21,7 +21,19 @@ public class ControllerLogin implements ActionListener{
    
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-    
+    public void actionPerformed(ActionEvent ae) {
+        Object source = ae.getSource();
+        if (source.equals(view.getBtnLogin())){
+            BtnLoginActionPerformed();
+        }
     }
+
+    private void BtnLoginActionPerformed() {
+//        Database db = new Database();
+//        db.
+    }
+    
+    
 }
+
+
