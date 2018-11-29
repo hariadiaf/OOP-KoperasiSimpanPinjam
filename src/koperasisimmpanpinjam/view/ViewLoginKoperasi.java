@@ -218,7 +218,7 @@ public class ViewLoginKoperasi extends javax.swing.JFrame {
         this.btnLogin.setText(bntLogin);
     }
     
-     public void addActionListener(ActionListener x){
+     public void addLoginListener(ActionListener x){
         btnLogin.addActionListener(x);
       
     }
