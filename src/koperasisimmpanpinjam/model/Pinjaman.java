@@ -13,6 +13,10 @@ public class Pinjaman implements Editableiface{
     private ArrayList<Catatan> catatan;
     private int angsuran;
     private int jmlAngsuran;
+
+    public Pinjaman() {
+        
+    }
     
     public void pinjaman(){
         this.catatan = new ArrayList<>();
