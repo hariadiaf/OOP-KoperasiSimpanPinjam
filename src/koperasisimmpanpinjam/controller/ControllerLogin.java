@@ -14,7 +14,7 @@ public class ControllerLogin implements ActionListener{
     public ControllerLogin(){
         view = new ViewLoginKoperasi();
         db = new Database();
-        view.addActionListener(this);
+        view.addLoginListener(this);
         view.setVisible(true);
         
     }
