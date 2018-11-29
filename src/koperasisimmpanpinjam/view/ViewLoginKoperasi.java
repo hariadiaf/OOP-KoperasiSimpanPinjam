@@ -1,9 +1,22 @@
 package koperasisimmpanpinjam.view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+
 public class ViewLoginKoperasi extends javax.swing.JFrame {
 
     public ViewLoginKoperasi() {
         initComponents();
+    }
+
+    public ViewLoginKoperasi() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public ViewLoginKoperasi() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 
@@ -186,4 +199,34 @@ public class ViewLoginKoperasi extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
+
+    public String getInputPassword() {
+        return InputPassword.getText();
+    }
+
+    public void setInputPassword(String InputPassword) {
+        this.InputPassword.setText(InputPassword);
+    }
+
+    public String getInputUsername() {
+        return InputUsername.getText();
+    }
+
+    public void setInputUsername(String InputUsername) {
+        this.InputUsername.setText(InputUsername);
+    }
+
+    public String getBntLogin() {
+        return bntLogin.getText();
+    }
+
+    public void setBntLogin(String bntLogin) {
+        this.bntLogin.setText(bntLogin);
+    }
+    
+     public void addActionListener(ActionListener x){
+        bntLogin.addActionListener(x);
+      
+    }
+
 }
