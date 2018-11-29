@@ -5,6 +5,9 @@
  */
 package koperasisimmpanpinjam.view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Hariadi Adha F
@@ -238,4 +241,43 @@ public class ViewSimpananWajib1 extends javax.swing.JFrame {
     private javax.swing.JLabel txtSimpananWajib;
     private javax.swing.JLabel txtTanggal1;
     // End of variables declaration//GEN-END:variables
+    
+    public void addBayarListener(ActionListener x){
+        btnBayar.addActionListener(x);
+    }
+
+    public JTextField getInputDibayar() {
+        return inputDibayar;
+    }
+
+    public void setInputDibayar(JTextField inputDibayar) {
+        this.inputDibayar = inputDibayar;
+    }
+
+    public JTextField getInputJumlahWajib1() {
+        return inputJumlahWajib1;
+    }
+
+    public void setInputJumlahWajib1(JTextField inputJumlahWajib1) {
+        this.inputJumlahWajib1 = inputJumlahWajib1;
+    }
+
+    public JTextField getInputKeterangan() {
+        return inputKeterangan;
+    }
+
+    public void setInputKeterangan(JTextField inputKeterangan) {
+        this.inputKeterangan = inputKeterangan;
+    }
+
+    public JTextField getInputTanggal1() {
+        return inputTanggal1;
+    }
+
+    public void setInputTanggal1(JTextField inputTanggal1) {
+        this.inputTanggal1 = inputTanggal1;
+    }
+    
+    
+
 }

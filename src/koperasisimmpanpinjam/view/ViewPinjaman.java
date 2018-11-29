@@ -5,6 +5,10 @@
  */
 package koperasisimmpanpinjam.view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JCheckBox;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Hariadi Adha F
@@ -293,4 +297,51 @@ public class ViewPinjaman extends javax.swing.JFrame {
     private javax.swing.JLabel txtTglBayar;
     private javax.swing.JLabel txtTglPinjam;
     // End of variables declaration//GEN-END:variables
+    public void addPinjamListener(ActionListener x){
+        btnPinjam.addActionListener(x);
+    }
+
+    public JTextField getInputBesarPinjaman() {
+        return inputBesarPinjaman;
+    }
+
+    public void setInputBesarPinjaman(JTextField inputBesarPinjaman) {
+        this.inputBesarPinjaman = inputBesarPinjaman;
+    }
+
+    public JTextField getInputNamaPinjPinjaman() {
+        return inputNamaPinjPinjaman;
+    }
+
+    public void setInputNamaPinjPinjaman(JTextField inputNamaPinjPinjaman) {
+        this.inputNamaPinjPinjaman = inputNamaPinjPinjaman;
+    }
+
+    public JTextField getInputTglBayar() {
+        return inputTglBayar;
+    }
+
+    public void setInputTglBayar(JTextField inputTglBayar) {
+        this.inputTglBayar = inputTglBayar;
+    }
+
+    public JTextField getInputTglPinjam() {
+        return inputTglPinjam;
+    }
+
+    public void setInputTglPinjam(JTextField inputTglPinjam) {
+        this.inputTglPinjam = inputTglPinjam;
+    }
+
+    public boolean getCheckBoxPinjaman() {
+        
+        return checkBoxPinjaman.isSelected();
+    }
+
+    public void setCheckBoxPinjaman(JCheckBox checkBoxPinjaman) {
+        this.checkBoxPinjaman = checkBoxPinjaman;
+    }
+    
+    
+    
 }

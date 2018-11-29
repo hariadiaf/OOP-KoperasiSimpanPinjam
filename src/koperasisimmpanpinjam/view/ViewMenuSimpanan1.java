@@ -5,6 +5,8 @@
  */
 package koperasisimmpanpinjam.view;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Hariadi Adha F
@@ -150,4 +152,12 @@ public class ViewMenuSimpanan1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
+
+    public void addSimpananPokokListener(ActionListener x){
+        btnSimpananPokok.addActionListener(x);
+    }
+    
+    public void addSimpananWajibListener(ActionListener x){
+        btnSimpananWajib.addActionListener(x);
+    }
 }

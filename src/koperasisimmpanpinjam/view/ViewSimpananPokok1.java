@@ -5,6 +5,10 @@
  */
 package koperasisimmpanpinjam.view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JCheckBox;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Hariadi Adha F
@@ -259,4 +263,50 @@ public class ViewSimpananPokok1 extends javax.swing.JFrame {
     private javax.swing.JLabel txtSimpananWajib;
     private javax.swing.JLabel txtTanggalPokok;
     // End of variables declaration//GEN-END:variables
+
+    public void addBayarPokokListener(ActionListener x){
+        btnBayarPokok.addActionListener(x);
+    }
+    
+    public boolean getCheckBoxSimpananPokok() {
+        return checkBoxSimpananPokok.isSelected();
+    }
+
+    public void setCheckBoxSimpananPokok(JCheckBox checkBoxSimpananPokok) {
+        this.checkBoxSimpananPokok = checkBoxSimpananPokok;
+    }
+
+    public JTextField getInputDibayarPokok() {
+        return inputDibayarPokok;
+    }
+
+    public void setInputDibayarPokok(JTextField inputDibayarPokok) {
+        this.inputDibayarPokok = inputDibayarPokok;
+    }
+
+    public JTextField getInputJumlahPokok() {
+        return inputJumlahPokok;
+    }
+
+    public void setInputJumlahPokok(JTextField inputJumlahPokok) {
+        this.inputJumlahPokok = inputJumlahPokok;
+    }
+
+    public JTextField getInputKeteranganPokok() {
+        return inputKeteranganPokok;
+    }
+
+    public void setInputKeteranganPokok(JTextField inputKeteranganPokok) {
+        this.inputKeteranganPokok = inputKeteranganPokok;
+    }
+
+    public JTextField getInputTanggalPokok() {
+        return inputTanggalPokok;
+    }
+
+    public void setInputTanggalPokok(JTextField inputTanggalPokok) {
+        this.inputTanggalPokok = inputTanggalPokok;
+    }
+
+    
 }
