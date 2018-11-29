@@ -5,6 +5,7 @@
  */
 package koperasisimmpanpinjam.view;
 
+import java.awt.event.ActionListener;
 import javax.swing.JTextField;
 
 /**
@@ -297,6 +298,35 @@ public class ViewAngsuran2 extends javax.swing.JFrame {
     public void setDeadlineAngsuran(String DeadlineAngsuran) {
         this.DeadlineAngsuran.setText(DeadlineAngsuran);
     }
-
+    
+    //YAZID ZONE//
+    
+    public String getNamaAngsuran() {
+        return inputNamaPinjAngsuran.getText();
+    }
+    
+    public void setNamaAngsuran(String NamaAngsuran) {
+        this.inputAngsAngsuran.setText(NamaAngsuran);
+    }
+    
+    public String getInputAngsuran() {
+        return inputAngsAngsuran.getText();
+    }
+    
+    public void setInputAngsuran(String AngsAngsuran){
+        this.inputAngsAngsuran.setText(AngsAngsuran);
+    }
+    
+    public String getTglAngsuran(){
+        return inputTglAngsuran.getText();
+    }
+    
+    public void setTglAngsuran(String TglAngsuran){
+        this.inputTglAngsuran.setText(TglAngsuran);
+    }
+    
+    public void addActionListener(ActionListener x){
+        btnBayarAngsuran.addActionListener(x);
+    }
 
 }
