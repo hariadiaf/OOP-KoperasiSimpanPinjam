@@ -276,36 +276,36 @@ public class ViewSimpananPokok1 extends javax.swing.JFrame {
         this.checkBoxSimpananPokok = checkBoxSimpananPokok;
     }
 
-    public JTextField getInputDibayarPokok() {
-        return inputDibayarPokok;
+    public String getInputDibayarPokok() {
+        return inputDibayarPokok.getText();
     }
 
-    public void setInputDibayarPokok(JTextField inputDibayarPokok) {
-        this.inputDibayarPokok = inputDibayarPokok;
+    public void setInputDibayarPokok(String inputDibayarPokok) {
+        this.inputDibayarPokok.setText(inputDibayarPokok);
     }
 
-    public JTextField getInputJumlahPokok() {
-        return inputJumlahPokok;
+    public String getInputJumlahPokok() {
+        return inputJumlahPokok.getText();
     }
 
-    public void setInputJumlahPokok(JTextField inputJumlahPokok) {
-        this.inputJumlahPokok = inputJumlahPokok;
+    public void setInputJumlahPokok(String inputJumlahPokok) {
+        this.inputJumlahPokok.setText(inputJumlahPokok);
     }
 
-    public JTextField getInputKeteranganPokok() {
-        return inputKeteranganPokok;
+    public String getInputKeteranganPokok() {
+        return inputKeteranganPokok.getText();
     }
 
-    public void setInputKeteranganPokok(JTextField inputKeteranganPokok) {
-        this.inputKeteranganPokok = inputKeteranganPokok;
+    public void setInputKeteranganPokok(String inputKeteranganPokok) {
+        this.inputKeteranganPokok.setText(inputKeteranganPokok);
     }
 
-    public JTextField getInputTanggalPokok() {
-        return inputTanggalPokok;
+    public String getInputTanggalPokok() {
+        return inputTanggalPokok.getText();
     }
 
-    public void setInputTanggalPokok(JTextField inputTanggalPokok) {
-        this.inputTanggalPokok = inputTanggalPokok;
+    public void setInputTanggalPokok(String inputTanggalPokok) {
+        this.inputTanggalPokok.setText(inputTanggalPokok);
     }
 
     

@@ -35,12 +35,14 @@ public class Database {
     }
     
     public void connect(){
+        System.out.println("try.. at least CONNECTED.");
         try{
-            String url = "jdbc:mysql://localhost/db_Koperasi";
+            String url = "jdbc:mysql://localhost/db_koperasi";
             String user = "root";
             String pass = "";
             conn = DriverManager.getConnection(url, user, pass);
             stmt = conn.createStatement();
+            
         }catch (SQLException ex){
             System.out.println("Error : "+ex);
         }
@@ -305,7 +307,7 @@ public class Database {
     
     public void delAnggota(String noAnggota){
         connect();
-        String query = "DELETE FROM anggota WHERE id='" + noAnggota + "'";
+        String query = "DELETE FROM `anggota` WHERE id_anggota='" + noAnggota + "'";
         if (manipulate(query)){
             for (Anggota angg : anggota) {
                 if (angg.getNoAnggota().equals(noAnggota)){
@@ -637,4 +639,10 @@ public class Database {
 //        disconnect();
         return "";   
     }
+
+    public void setAnggota(ArrayList<Anggota> anggota) {
+        this.anggota = anggota;
+    }
+    
+    
 }

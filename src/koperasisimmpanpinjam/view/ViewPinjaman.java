@@ -297,51 +297,48 @@ public class ViewPinjaman extends javax.swing.JFrame {
     private javax.swing.JLabel txtTglBayar;
     private javax.swing.JLabel txtTglPinjam;
     // End of variables declaration//GEN-END:variables
-    public void addPinjamListener(ActionListener x){
+    public void addPinjamListener(ActionListener x) {
         btnPinjam.addActionListener(x);
     }
 
-    public JTextField getInputBesarPinjaman() {
-        return inputBesarPinjaman;
+    public String getInputBesarPinjaman() {
+        return inputBesarPinjaman.getText();
     }
 
-    public void setInputBesarPinjaman(JTextField inputBesarPinjaman) {
-        this.inputBesarPinjaman = inputBesarPinjaman;
+    public void setInputBesarPinjaman(String inputBesarPinjaman) {
+        this.inputBesarPinjaman.setText(inputBesarPinjaman);
     }
 
-    public JTextField getInputNamaPinjPinjaman() {
-        return inputNamaPinjPinjaman;
+    public String getInputNamaPinjPinjaman() {
+        return inputNamaPinjPinjaman.getText();
     }
 
-    public void setInputNamaPinjPinjaman(JTextField inputNamaPinjPinjaman) {
-        this.inputNamaPinjPinjaman = inputNamaPinjPinjaman;
+    public void setInputNamaPinjPinjaman(String inputNamaPinjPinjaman) {
+        this.inputNamaPinjPinjaman.setText(inputNamaPinjPinjaman);
     }
 
-    public JTextField getInputTglBayar() {
-        return inputTglBayar;
+    public String getInputTglBayar() {
+        return inputTglBayar.getText();
     }
 
-    public void setInputTglBayar(JTextField inputTglBayar) {
-        this.inputTglBayar = inputTglBayar;
+    public void setInputTglBayar(String inputTglBayar) {
+        this.inputTglBayar.setText(inputTglBayar);
     }
 
-    public JTextField getInputTglPinjam() {
-        return inputTglPinjam;
+    public String getInputTglPinjam() {
+        return inputTglPinjam.getText();
     }
 
-    public void setInputTglPinjam(JTextField inputTglPinjam) {
-        this.inputTglPinjam = inputTglPinjam;
+    public void setInputTglPinjam(String inputTglPinjam) {
+        this.inputTglPinjam.setText(inputTglPinjam);
     }
 
     public boolean getCheckBoxPinjaman() {
-        
         return checkBoxPinjaman.isSelected();
     }
 
     public void setCheckBoxPinjaman(JCheckBox checkBoxPinjaman) {
         this.checkBoxPinjaman = checkBoxPinjaman;
     }
-    
-    
-    
+
 }

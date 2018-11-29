@@ -7,6 +7,7 @@ package koperasisimmpanpinjam.view;
 
 import java.awt.event.ActionListener;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -68,6 +69,7 @@ public class ViewAdmin extends javax.swing.JFrame {
         );
 
         jPanel3.setBackground(new java.awt.Color(97, 90, 79));
+        jPanel3.setPreferredSize(new java.awt.Dimension(1440, 1024));
 
         tAnggota.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -120,14 +122,14 @@ public class ViewAdmin extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(261, Short.MAX_VALUE))
+                .addContainerGap(876, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(599, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -142,8 +144,7 @@ public class ViewAdmin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(438, Short.MAX_VALUE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -199,8 +200,8 @@ public class ViewAdmin extends javax.swing.JFrame {
         return tAnggota;
     }
 
-    public void settAnggota(JTable tAnggota) {
-        this.tAnggota = tAnggota;
+    public void settAnggota(DefaultTableModel tAnggota) {
+        this.tAnggota.setModel(tAnggota);
     }
     
     public void addDetailListener(ActionListener x){
@@ -209,6 +210,11 @@ public class ViewAdmin extends javax.swing.JFrame {
     
     public void addHapusListener(ActionListener x){
         btnHapus.addActionListener(x);
+    }
+    
+    public String getSelectedId(){
+        int row = tAnggota.getSelectedRow();
+        return (String)tAnggota.getValueAt(row, 0);
     }
     
 }

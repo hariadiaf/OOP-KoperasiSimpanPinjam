@@ -246,36 +246,36 @@ public class ViewSimpananWajib1 extends javax.swing.JFrame {
         btnBayar.addActionListener(x);
     }
 
-    public JTextField getInputDibayar() {
-        return inputDibayar;
+    public String getInputDibayar() {
+        return inputDibayar.getText();
     }
 
-    public void setInputDibayar(JTextField inputDibayar) {
-        this.inputDibayar = inputDibayar;
+    public void setInputDibayar(String inputDibayar) {
+        this.inputDibayar.setText(inputDibayar);
     }
 
-    public JTextField getInputJumlahWajib1() {
-        return inputJumlahWajib1;
+    public String getInputJumlahWajib1() {
+        return inputJumlahWajib1.getText();
     }
 
-    public void setInputJumlahWajib1(JTextField inputJumlahWajib1) {
-        this.inputJumlahWajib1 = inputJumlahWajib1;
+    public void setInputJumlahWajib1(String inputJumlahWajib1) {
+        this.inputJumlahWajib1.setText(inputJumlahWajib1);
     }
 
-    public JTextField getInputKeterangan() {
-        return inputKeterangan;
+    public String getInputKeterangan() {
+        return inputKeterangan.getText();
     }
 
-    public void setInputKeterangan(JTextField inputKeterangan) {
-        this.inputKeterangan = inputKeterangan;
+    public void setInputKeterangan(String inputKeterangan) {
+        this.inputKeterangan.setText(inputKeterangan);
     }
 
-    public JTextField getInputTanggal1() {
-        return inputTanggal1;
+    public String getInputTanggal1() {
+        return inputTanggal1.getText();
     }
 
-    public void setInputTanggal1(JTextField inputTanggal1) {
-        this.inputTanggal1 = inputTanggal1;
+    public void setInputTanggal1(String inputTanggal1) {
+        this.inputTanggal1.setText(inputTanggal1);
     }
     
     
