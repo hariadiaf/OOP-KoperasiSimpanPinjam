@@ -632,12 +632,12 @@ public class Database {
             String query = "SELECT * FROM login WHERE Username = '"+username+"' AND Password = '"+password;
             rs = stmt.executeQuery(query);
             while (rs.next()){
-                if
+                
             }
         } catch (SQLException ex) {
             System.out.println("Error : "+ex);
        }        disconnect();
-        return ;   
+        return check;   
     }
 
     public void setAnggota(ArrayList<Anggota> anggota) {

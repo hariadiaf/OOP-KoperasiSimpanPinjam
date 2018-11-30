@@ -62,7 +62,7 @@ public class ViewLoginKoperasi extends javax.swing.JFrame {
 
         btnLogin.setBackground(new java.awt.Color(68, 112, 177));
         btnLogin.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
-        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogin.setForeground(new java.awt.Color(0, 255, 255));
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -14,8 +14,9 @@ public class DriverKoperasiSimmpanPinjam {
         Database database = new Database();
         //database.addAngsuran(new Angsuran("MBR201801", "ANG201801", 1000000f, 1000000f, "PIN201801", 0.05f, new Date(2018-1900, 11-1, 29), 0));
         //System.out.println("Hasil List : "+database.getAngsuran().size());
-        ControllerAdmin cAdmin = new ControllerAdmin(new ViewAdmin());
-        cAdmin.showView();
+//        ControllerAdmin cAdmin = new ControllerAdmin(new ViewAdmin());
+        new ControllerMenuAnggota();
+//        cAdmin.showView();
         
     }
     

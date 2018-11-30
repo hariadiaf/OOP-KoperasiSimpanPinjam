@@ -20,5 +20,7 @@ public class ControllerMenuSimpanan {
         });
     }
     
-    
+    public void ShowView(){
+//        this.view;
+    }
 }

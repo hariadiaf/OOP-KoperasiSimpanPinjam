@@ -9,6 +9,7 @@ import koperasisimmpanpinjam.view.ViewLoginKoperasi;
 
 public class ControllerLogin extends Database{
     private ViewLoginKoperasi view;
+    private Database db;
 
     public ControllerLogin(ViewLoginKoperasi view){
         this.view = view;

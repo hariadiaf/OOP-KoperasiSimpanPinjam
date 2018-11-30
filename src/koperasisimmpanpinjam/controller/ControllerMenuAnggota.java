@@ -2,28 +2,53 @@ package koperasisimmpanpinjam.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import koperasisimmpanpinjam.view.ViewAngsuran1;
 import koperasisimmpanpinjam.view.ViewMenuAnggota;
 import koperasisimmpanpinjam.view.ViewMenuSimpanan1;
+import koperasisimmpanpinjam.view.ViewPinjaman;
 
-public class ControllerMenuAnggota {
+public class ControllerMenuAnggota implements ActionListener{
     private ViewMenuAnggota view;
     private Database db;
 
-    public ControllerMenuAnggota(ViewMenuAnggota view, Database db) {
-        this.view = view;
-        this.db = db;
-        
-        this.view.setBtnSimpanan(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-               toSimpanan();
-            }
-        });
+    public ControllerMenuAnggota() {
+        view = new ViewMenuAnggota();
+        db = new Database();
+        view.addActionListener(this);
+        view.setVisible(true);
+//        this.view.setBtnSimpanan(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//               toSimpanan();
+//            }
+//        });
     }
     
     public void toSimpanan(){
-        ControllerMenuSimpanan simp = new ControllerMenuSimpanan(new ViewMenuSimpanan1, db);
+       ViewMenuSimpanan1 simpan = new ViewMenuSimpanan1();
+       simpan.setVisible(true);
     }
+    
+    public void toPinjaman(){
+        ViewPinjaman pinjam = new ViewPinjaman();
+        pinjam.setVisible(true);
+    }
+    
+    public void toAngsuran(){
+        ViewAngsuran1 angsur = new ViewAngsuran1();
+        angsur.setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+       Object source = e.getSource();
+       if(source.equals(view.getBtnSimpanan())){
+           toSimpanan();
+          
+       }
+    }
+    
+    
     
     
 }
