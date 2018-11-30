@@ -6,6 +6,7 @@
 package koperasisimmpanpinjam.view;
 
 import java.awt.event.ActionListener;
+import javax.swing.JToggleButton;
 
 /**
  *
@@ -160,4 +161,22 @@ public class ViewMenuSimpanan1 extends javax.swing.JFrame {
     public void addSimpananWajibListener(ActionListener x){
         btnSimpananWajib.addActionListener(x);
     }
+
+    public JToggleButton getBtnSimpananPokok() {
+        return btnSimpananPokok;
+    }
+
+    public void setBtnSimpananPokok(ActionListener btnSimpananPokok) {
+        this.btnSimpananPokok.addActionListener(btnSimpananPokok);
+    }
+
+    public JToggleButton getBtnSimpananWajib() {
+        return btnSimpananWajib;
+    }
+
+    public void setBtnSimpananWajib(ActionListener btnSimpananWajib) {
+        this.btnSimpananWajib.addActionListener(btnSimpananWajib);
+    }
+    
+    
 }
