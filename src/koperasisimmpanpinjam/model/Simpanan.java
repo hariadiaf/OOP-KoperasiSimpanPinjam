@@ -1,5 +1,6 @@
 package koperasisimmpanpinjam.model;
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class Simpanan implements Editableiface {
@@ -8,7 +9,7 @@ public class Simpanan implements Editableiface {
     private double jumlahSimpanan;
     private double simpananPokok;
     private double simpananWajib;
-    
+    private ResultSet rs;
     private ArrayList<Catatan> catatan;
 
     public void simpanan(){

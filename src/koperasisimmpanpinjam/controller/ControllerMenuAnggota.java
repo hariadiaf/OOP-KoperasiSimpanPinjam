@@ -25,18 +25,21 @@ public class ControllerMenuAnggota implements ActionListener{
     }
     
     public void toSimpanan(){
-       ViewMenuSimpanan1 simpan = new ViewMenuSimpanan1();
-       simpan.setVisible(true);
+       new ControllerMenuSimpanan();
+       this.view.dispose();
     }
     
     public void toPinjaman(){
-        ViewPinjaman pinjam = new ViewPinjaman();
-        pinjam.setVisible(true);
+        new ControllerPinjaman();
+        this.view.dispose();
+        
     }
     
     public void toAngsuran(){
-        ViewAngsuran1 angsur = new ViewAngsuran1();
-        angsur.setVisible(true);
+//        ViewAngsuran1 angsur = new ViewAngsuran1();
+//        angsur.setVisible(true);
+        new ControllerAngsuran1();
+        this.view.dispose();
     }
 
     @Override
@@ -44,11 +47,11 @@ public class ControllerMenuAnggota implements ActionListener{
        Object source = e.getSource();
        if(source.equals(view.getBtnSimpanan())){
            toSimpanan();
-          
+       }else if (source.equals(view.getBtnPinjaman())){
+           toPinjaman();
+       }else if(source.equals(view.getBtnAngsuran())){
+           toAngsuran();
        }
     }
-    
-    
-    
     
 }

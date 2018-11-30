@@ -35,10 +35,10 @@ public class ViewMenuSimpanan1 extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        btnSimpananWajib = new javax.swing.JToggleButton();
-        btnSimpananPokok = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
-        btnBackMenuAngs = new javax.swing.JButton();
+        btnBackMenuSimp = new javax.swing.JButton();
+        btnSimpananWajib = new javax.swing.JButton();
+        btnSimpananPokok = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,19 +57,24 @@ public class ViewMenuSimpanan1 extends javax.swing.JFrame {
             .addGap(0, 145, Short.MAX_VALUE)
         );
 
+        jLabel1.setFont(new java.awt.Font("Roboto", 1, 64)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Simpanan");
+
+        btnBackMenuSimp.setFont(new java.awt.Font("Roboto", 1, 32)); // NOI18N
+        btnBackMenuSimp.setForeground(new java.awt.Color(204, 0, 51));
+        btnBackMenuSimp.setText("Kembali");
+
         btnSimpananWajib.setFont(new java.awt.Font("Roboto", 1, 64)); // NOI18N
         btnSimpananWajib.setText("Simpanan Wajib");
 
         btnSimpananPokok.setFont(new java.awt.Font("Roboto", 1, 64)); // NOI18N
         btnSimpananPokok.setText("Simpanan Pokok");
-
-        jLabel1.setFont(new java.awt.Font("Roboto", 1, 64)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Simpanan");
-
-        btnBackMenuAngs.setFont(new java.awt.Font("Roboto", 1, 32)); // NOI18N
-        btnBackMenuAngs.setForeground(new java.awt.Color(204, 0, 51));
-        btnBackMenuAngs.setText("Kembali");
+        btnSimpananPokok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSimpananPokokActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -80,14 +85,14 @@ public class ViewMenuSimpanan1 extends javax.swing.JFrame {
                 .addGap(110, 110, 110)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnBackMenuAngs, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnBackMenuSimp, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 756, Short.MAX_VALUE)
                         .addComponent(jLabel1)
                         .addGap(67, 67, 67))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnSimpananPokok, javax.swing.GroupLayout.PREFERRED_SIZE, 1226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSimpananWajib, javax.swing.GroupLayout.PREFERRED_SIZE, 1226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btnSimpananPokok, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1226, Short.MAX_VALUE)
+                            .addComponent(btnSimpananWajib, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -97,12 +102,12 @@ public class ViewMenuSimpanan1 extends javax.swing.JFrame {
                 .addGap(69, 69, 69)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1)
-                    .addComponent(btnBackMenuAngs, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(75, 75, 75)
+                    .addComponent(btnBackMenuSimp, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(72, 72, 72)
                 .addComponent(btnSimpananWajib, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83)
+                .addGap(87, 87, 87)
                 .addComponent(btnSimpananPokok, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -123,46 +128,15 @@ public class ViewMenuSimpanan1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ViewMenuSimpanan1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ViewMenuSimpanan1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ViewMenuSimpanan1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ViewMenuSimpanan1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
+    private void btnSimpananPokokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpananPokokActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSimpananPokokActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ViewMenuSimpanan1().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBackMenuAngs;
-    private javax.swing.JToggleButton btnSimpananPokok;
-    private javax.swing.JToggleButton btnSimpananWajib;
+    private javax.swing.JButton btnBackMenuSimp;
+    private javax.swing.JButton btnSimpananPokok;
+    private javax.swing.JButton btnSimpananWajib;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -170,37 +144,41 @@ public class ViewMenuSimpanan1 extends javax.swing.JFrame {
 
     
     
-    public void addSimpananPokokListener(ActionListener x){
-        btnSimpananPokok.addActionListener(x);
-    }
-    
-    public void addSimpananWajibListener(ActionListener x){
-        btnSimpananWajib.addActionListener(x);
-    }
+//    public void addSimpananPokokListener(ActionListener x){
+//        btnSimpananPokok.addActionListener(x);
+//    }
+//    
+//    public void addSimpananWajibListener(ActionListener x){
+//        btnSimpananWajib.addActionListener(x);
+//    }
 
-    public JToggleButton getBtnSimpananPokok() {
+    public JButton getBtnSimpananPokok() {
         return btnSimpananPokok;
     }
+//
+//    public void setBtnSimpananPokok(ActionListener btnSimpananPokok) {
+//        this.btnSimpananPokok.addActionListener(btnSimpananPokok);
+//    }
 
-    public void setBtnSimpananPokok(ActionListener btnSimpananPokok) {
-        this.btnSimpananPokok.addActionListener(btnSimpananPokok);
-    }
-
-    public JToggleButton getBtnSimpananWajib() {
+    public JButton getBtnSimpananWajib() {
         return btnSimpananWajib;
     }
+//
+//    public void setBtnSimpananWajib(ActionListener btnSimpananWajib) {
+//        this.btnSimpananWajib.addActionListener(btnSimpananWajib);
+//    }
 
-    public void setBtnSimpananWajib(ActionListener btnSimpananWajib) {
-        this.btnSimpananWajib.addActionListener(btnSimpananWajib);
+    public JButton getBtnBackMenuSimp() {
+        return btnBackMenuSimp;
     }
 
-    public JButton getBtnBackMenuAngs() {
-        return btnBackMenuAngs;
+    public void setBtnBackMenuSimp(JButton btnBackMenuSimp) {
+        this.btnBackMenuSimp = btnBackMenuSimp;
     }
-
-    public void setBtnBackMenuAngs(JButton btnBackMenuAngs) {
-        this.btnBackMenuAngs = btnBackMenuAngs;
+    public void addActionListener(ActionListener x){
+        btnSimpananPokok.addActionListener(x);
+        btnSimpananWajib.addActionListener(x);
+        btnBackMenuSimp.addActionListener(x);
     }
-    
     
 }

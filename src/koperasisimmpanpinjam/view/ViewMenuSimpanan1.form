@@ -54,15 +54,15 @@
                   <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="btnBackMenuAngs" min="-2" pref="188" max="-2" attributes="0"/>
+                          <Component id="btnBackMenuSimp" min="-2" pref="188" max="-2" attributes="0"/>
                           <EmptySpace pref="756" max="32767" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btnSimpananPokok" min="-2" pref="1226" max="-2" attributes="0"/>
-                              <Component id="btnSimpananWajib" min="-2" pref="1226" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="btnSimpananPokok" alignment="0" pref="1226" max="32767" attributes="0"/>
+                              <Component id="btnSimpananWajib" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -77,13 +77,13 @@
                   <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnBackMenuAngs" min="-2" pref="64" max="-2" attributes="0"/>
+                      <Component id="btnBackMenuSimp" min="-2" pref="64" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                   <Component id="btnSimpananWajib" min="-2" pref="236" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                   <Component id="btnSimpananPokok" min="-2" pref="236" max="-2" attributes="0"/>
-                  <EmptySpace pref="122" max="32767" attributes="0"/>
+                  <EmptySpace pref="121" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -109,22 +109,6 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Component class="javax.swing.JToggleButton" name="btnSimpananWajib">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Roboto" size="64" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Simpanan Wajib"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JToggleButton" name="btnSimpananPokok">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Roboto" size="64" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Simpanan Pokok"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -136,7 +120,7 @@
             <Property name="text" type="java.lang.String" value="Simpanan"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnBackMenuAngs">
+        <Component class="javax.swing.JButton" name="btnBackMenuSimp">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto" size="32" style="1"/>
@@ -146,6 +130,25 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Kembali"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnSimpananWajib">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Roboto" size="64" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Simpanan Wajib"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnSimpananPokok">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Roboto" size="64" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Simpanan Pokok"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSimpananPokokActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

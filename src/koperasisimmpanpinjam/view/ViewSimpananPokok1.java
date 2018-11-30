@@ -6,6 +6,7 @@
 package koperasisimmpanpinjam.view;
 
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 
@@ -45,6 +46,7 @@ public class ViewSimpananPokok1 extends javax.swing.JFrame {
         btnBayarPokok = new javax.swing.JButton();
         checkBoxSimpananPokok = new javax.swing.JCheckBox();
         txtSimpananWajib = new javax.swing.JLabel();
+        btnBackInSimpPokok = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -164,6 +166,10 @@ public class ViewSimpananPokok1 extends javax.swing.JFrame {
         txtSimpananWajib.setForeground(new java.awt.Color(255, 255, 255));
         txtSimpananWajib.setText("Simpanan Pokok");
 
+        btnBackInSimpPokok.setFont(new java.awt.Font("Roboto", 1, 32)); // NOI18N
+        btnBackInSimpPokok.setForeground(new java.awt.Color(204, 0, 51));
+        btnBackInSimpPokok.setText("Kembali");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -173,8 +179,11 @@ public class ViewSimpananPokok1 extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtSimpananWajib)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnBackInSimpPokok)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtSimpananWajib))
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(72, 72, 72))
         );
@@ -182,8 +191,13 @@ public class ViewSimpananPokok1 extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(txtSimpananWajib)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(txtSimpananWajib))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(btnBackInSimpPokok)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39))
@@ -248,6 +262,7 @@ public class ViewSimpananPokok1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBackInSimpPokok;
     private javax.swing.JButton btnBayarPokok;
     private javax.swing.JCheckBox checkBoxSimpananPokok;
     private javax.swing.JTextField inputDibayarPokok;
@@ -308,5 +323,25 @@ public class ViewSimpananPokok1 extends javax.swing.JFrame {
         this.inputTanggalPokok.setText(inputTanggalPokok);
     }
 
+    public JButton getBtnBackInSimpPokok() {
+        return btnBackInSimpPokok;
+    }
+
+    public void setBtnBackInSimpPokok(JButton btnBackInSimpPokok) {
+        this.btnBackInSimpPokok = btnBackInSimpPokok;
+    }
+
+    public JButton getBtnBayarPokok() {
+        return btnBayarPokok;
+    }
+
+    public void setBtnBayarPokok(JButton btnBayarPokok) {
+        this.btnBayarPokok = btnBayarPokok;
+    }
+
+    public void addActionListener(ActionListener e){
+        btnBackInSimpPokok.addActionListener(e);
+        btnBayarPokok.addActionListener(e);
+    }
     
 }

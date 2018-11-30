@@ -8,22 +8,24 @@ import koperasisimmpanpinjam.view.ViewPinjaman;
 public class ControllerPinjaman {
     private ViewPinjaman view;
     private Pinjaman model;
+    private Database db;
 
-    public ControllerPinjaman(ViewPinjaman view, Pinjaman model) {
-        this.view = view;
-        this.model = model;
+    public ControllerPinjaman() {
+        view = new ViewPinjaman();
+        db = new Database();
+        view.setVisible(true);
         
-        this.view.addPinjamListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                
-            }
-        });
+//        this.view.addPinjamListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                
+//            }
+//        });
     }
     
     public void showView(){
         this.view.setLocationRelativeTo(null);
-        this.view.show();
+        this.view.setVisible(true);
     }
     
     

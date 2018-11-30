@@ -6,6 +6,8 @@
 package koperasisimmpanpinjam.view;
 
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 
 /**
@@ -42,7 +44,9 @@ public class ViewSimpananWajib1 extends javax.swing.JFrame {
         txtKeterangan = new javax.swing.JLabel();
         inputKeterangan = new javax.swing.JTextField();
         btnBayar = new javax.swing.JButton();
+        checkBoxSimpananWajib = new javax.swing.JCheckBox();
         txtSimpananWajib = new javax.swing.JLabel();
+        btnBackInSimpWajib = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -96,28 +100,41 @@ public class ViewSimpananWajib1 extends javax.swing.JFrame {
             }
         });
 
+        checkBoxSimpananWajib.setFont(new java.awt.Font("Roboto", 2, 24)); // NOI18N
+        checkBoxSimpananWajib.setText("Dengan ini saya menyatakan setuju dengan jumlah yang akan saya simpan");
+        checkBoxSimpananWajib.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBoxSimpananWajibActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtJmlWajib)
-                    .addComponent(txtKeterangan)
-                    .addComponent(txtTanggal1)
-                    .addComponent(txtDibayar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 152, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(inputDibayar, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(inputTanggal1, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(inputKeterangan, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(inputJumlahWajib1, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(67, 67, 67))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnBayar, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82))
+                .addGap(81, 81, 81))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(checkBoxSimpananWajib))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(82, 82, 82)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtJmlWajib)
+                            .addComponent(txtKeterangan)
+                            .addComponent(txtTanggal1)
+                            .addComponent(txtDibayar))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 152, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(inputDibayar, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputTanggal1, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputKeterangan, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputJumlahWajib1, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(67, 67, 67))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,14 +155,20 @@ public class ViewSimpananWajib1 extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(inputKeterangan, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtKeterangan))
-                .addGap(88, 88, 88)
+                .addGap(33, 33, 33)
+                .addComponent(checkBoxSimpananWajib)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(btnBayar, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addGap(45, 45, 45))
         );
 
         txtSimpananWajib.setFont(new java.awt.Font("Roboto", 1, 64)); // NOI18N
         txtSimpananWajib.setForeground(new java.awt.Color(255, 255, 255));
         txtSimpananWajib.setText("Simpanan Wajib");
+
+        btnBackInSimpWajib.setFont(new java.awt.Font("Roboto", 1, 32)); // NOI18N
+        btnBackInSimpWajib.setForeground(new java.awt.Color(204, 0, 51));
+        btnBackInSimpWajib.setText("Kembali");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -156,8 +179,11 @@ public class ViewSimpananWajib1 extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtSimpananWajib)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnBackInSimpWajib, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtSimpananWajib))
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(72, 72, 72))
         );
@@ -166,7 +192,9 @@ public class ViewSimpananWajib1 extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
-                .addComponent(txtSimpananWajib)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtSimpananWajib)
+                    .addComponent(btnBackInSimpWajib, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(89, 89, 89))
@@ -190,44 +218,15 @@ public class ViewSimpananWajib1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBayarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ViewSimpananWajib1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ViewSimpananWajib1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ViewSimpananWajib1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ViewSimpananWajib1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
+    private void checkBoxSimpananWajibActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxSimpananWajibActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkBoxSimpananWajibActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ViewSimpananWajib1().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBackInSimpWajib;
     private javax.swing.JButton btnBayar;
+    private javax.swing.JCheckBox checkBoxSimpananWajib;
     private javax.swing.JTextField inputDibayar;
     private javax.swing.JTextField inputJumlahWajib1;
     private javax.swing.JTextField inputKeterangan;
@@ -277,7 +276,22 @@ public class ViewSimpananWajib1 extends javax.swing.JFrame {
     public void setInputTanggal1(String inputTanggal1) {
         this.inputTanggal1.setText(inputTanggal1);
     }
-    
-    
 
+    public JButton getBtnBackInSimpWajib() {
+        return btnBackInSimpWajib;
+    }
+
+    public void setBtnBackInSimpWajib(JButton btnBackInSimpWajib) {
+        this.btnBackInSimpWajib = btnBackInSimpWajib;
+    }
+
+    public JCheckBox getCheckBoxSimpananWajib() {
+        return checkBoxSimpananWajib;
+    }
+
+    public void setCheckBoxSimpananWajib(JCheckBox checkBoxSimpananWajib) {
+        this.checkBoxSimpananWajib = checkBoxSimpananWajib;
+    }
+    
+    
 }
