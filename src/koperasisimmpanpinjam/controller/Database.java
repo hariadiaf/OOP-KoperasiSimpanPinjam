@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.logging.Level;
 import koperasisimmpanpinjam.model.Admin;
 import koperasisimmpanpinjam.model.Anggota;
 import koperasisimmpanpinjam.model.Angsuran;
@@ -101,7 +102,7 @@ public class Database {
     }
 
     public ResultSet selectedSimpanan(String id_simpanan) {
-         try {
+        try {
             String query = "SELECT * FROM simpanan where id_simpanan ='" + id_simpanan + "'";
             rs = stmt.executeQuery(query);
         } catch (Exception e) {
@@ -114,19 +115,52 @@ public class Database {
         Boolean berhasil = false;
         try {
             String query = "INSERT INTO simpanan(id_simpanan,jml_simpanan,simpanan_pokok,simpanan_wajib,id_anggota) values('" + pokok.getIdSimpanan() + "'"
-                    + "," + pokok.getJumlahSimpanan() + "," + pokok.getSimpananPokok() + ",'" + pokok.getSimpananWajib() + "','"+pokok.getNoAnggota()+"')";
+                    + "," + pokok.getJumlahSimpanan() + "," + pokok.getSimpananPokok() + ",'" + pokok.getSimpananWajib() + "','" + pokok.getNoAnggota() + "')";
             stmt = conn.createStatement();
-            System.out.println("query : "+query);
+            System.out.println("query : " + query);
             int result = stmt.executeUpdate(query);
-            if(result > 0){
+            if (result > 0) {
                 berhasil = true;
                 System.out.println("Berhasil");
-            }else{
+            } else {
                 System.out.println("Gagal");
             }
         } catch (SQLException e) {
-            System.err.println("error :"+e);
+            System.err.println("error :" + e);
         }
+    }
+    public void loadAnggotaDetail(String idAnggota) throws SQLException {
+        connect();
+        String query = "SELECT * FROM 'anggota' WHERE id_anggota ='" + idAnggota + "'";
+        rs = stmt.executeQuery(query);
+       disconnect();
+    }
+
+    public Anggota findAnggota(String id) {
+        try {
+            Anggota a = null;
+            connect();
+            String query = "SELECT * FROM `anggota` WHERE `id_anggota` = '" + id + "';";
+            //System.out.println(query);
+            rs = stmt.executeQuery(query);
+            if (!(rs == null)) {
+                while (rs.next()) {
+                    a = new Anggota(
+                            rs.getString("id_anggota"),
+                            rs.getString("nama_anggota"),
+                            rs.getString("alamat"),
+                            rs.getString("status"),
+                            rs.getDate("tgl_lahir")
+                    );
+                }
+            } else {
+                System.out.println("ID tidak di temukan di database!");
+            }
+            return a;
+        } catch (SQLException ex) {
+            java.util.logging.Logger.getLogger(Anggota.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
 
     public void loadAngsuran() {
@@ -185,6 +219,35 @@ public class Database {
         disconnect();
     }
 
+    public Pinjaman findPinjamanAnggota(String id) {
+        try {
+            Pinjaman p = null;
+            connect();
+            String query = "SELECT * FROM `pinjaman` WHERE `id_anggota` = '" + id + "';";
+            //System.out.println(query);
+            rs = stmt.executeQuery(query);
+            if (!(rs == null)) {
+                while (rs.next()) {
+                    p = new Pinjaman(
+                            rs.getString("id_anggota"),
+                            rs.getString("id_pinjaman"),
+                            rs.getDouble("jml_pinjaman"),
+                            rs.getString("durasi_pinjaman"),
+                            rs.getDate("tgl_pinjaman"),
+                            rs.getFloat("bunga"),
+                            rs.getInt("angsuran")
+                    );
+                }
+            } else {
+                System.out.println("ID tidak di temukan di database!");
+            }
+            return p;
+        } catch (SQLException ex) {
+            java.util.logging.Logger.getLogger(Anggota.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
     public void loadSimpanan() {
         connect();
         try {
@@ -197,6 +260,33 @@ public class Database {
             System.out.println("Error : " + ex);
         }
         disconnect();
+    }
+
+    public Simpanan findSimpananAnggota(String id) {
+        try {
+            Simpanan s = null;
+            connect();
+            String query = "SELECT * FROM `simpanan` WHERE `id_anggota` = '" + id + "';";
+            //System.out.println(query);
+            rs = stmt.executeQuery(query);
+            if (!(rs == null)) {
+                while (rs.next()) {
+                    s = new Simpanan(
+                            rs.getString("id_anggota"),
+                            rs.getString("id_simpanan"),
+                            rs.getDouble("jml_simpanan"),
+                            rs.getDouble("simpanan_pokok"),
+                            rs.getDouble("simpanan_wajib")
+                    );
+                }
+            } else {
+                System.out.println("ID tidak di temukan di database!");
+            }
+            return s;
+        } catch (SQLException ex) {
+            java.util.logging.Logger.getLogger(Anggota.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
 
     //End DBLoad
@@ -682,13 +772,19 @@ public class Database {
             String query = "SELECT * FROM login WHERE Username = '" + username + "' AND Password = '" + password;
             rs = stmt.executeQuery(query);
             while (rs.next()) {
+                if (isQueryEmpty(rs)) {
 
+                }
             }
         } catch (SQLException ex) {
             System.out.println("Error : " + ex);
         }
         disconnect();
         return check;
+    }
+
+    public boolean isQueryEmpty(ResultSet rs) throws SQLException {
+        return !rs.isBeforeFirst();
     }
 
     public void setAnggota(ArrayList<Anggota> anggota) {
