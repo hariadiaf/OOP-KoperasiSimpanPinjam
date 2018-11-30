@@ -13,15 +13,9 @@ public class ControllerPinjaman {
         this.view = view;
         this.model = model;
         
-        this.view.setBtnPinjamEvent(new ActionListener() {
+        this.view.addPinjamListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(view.isCheckBoxPinjaman()){
-                    view.disableBtnPinjam();
-                    System.out.println("dipencet");
-                }else{
-                    view.enableBtnPinjam();
-                }
                 
             }
         });

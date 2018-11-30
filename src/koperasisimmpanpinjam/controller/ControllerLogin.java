@@ -10,7 +10,6 @@ import koperasisimmpanpinjam.view.ViewLoginKoperasi;
 public class ControllerLogin extends Database{
     private ViewLoginKoperasi view;
 
-<<<<<<< HEAD
     public ControllerLogin(ViewLoginKoperasi view){
         this.view = view;
         this.view.addLoginListener(new ActionListener() {  //buat anonymous class dengan menginstansiasi actionListener baru !!!!!!
@@ -19,14 +18,7 @@ public class ControllerLogin extends Database{
                 
             }
         }); 
-=======
-    public ControllerLogin(){
-        view = new ViewLoginKoperasi();
-        db = new Database();
-        view.addLoginListener(this);
-        view.setVisible(true);
         
->>>>>>> origin/master
     }
    
     
