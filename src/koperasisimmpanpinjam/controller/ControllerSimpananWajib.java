@@ -15,8 +15,9 @@ public class ControllerSimpananWajib  implements ActionListener{
     private Database db;
     private Simpanan model;
     private ResultSet rs;
+    private String id;
     
-    public ControllerSimpananWajib(){
+    public ControllerSimpananWajib(String id){
         view = new ViewSimpananWajib1();
         view.addActionListener(this);
         db = new Database();
@@ -40,7 +41,7 @@ public class ControllerSimpananWajib  implements ActionListener{
         while (rs.next()) {            
             simWajib = Integer.parseInt(jumlah) + Integer.parseInt(rs.getString("Simpanan Wajib"));
         }
-        Simpanan sim = new Simpanan("MBR201801", "simWajib01", Integer.parseInt(jumlah), Integer.parseInt(jumlah), simWajib);
+        Simpanan sim = new Simpanan(this.id, "simWajib01", Integer.parseInt(jumlah), Integer.parseInt(jumlah), simWajib);
         db.insertDataPokok(sim);
         db.disconnect();
     }
@@ -55,7 +56,7 @@ public class ControllerSimpananWajib  implements ActionListener{
                 Logger.getLogger(ControllerSimpananWajib.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else if(source.equals(view.getBtnBackInSimpWajib())){
-            new ControllerMenuSimpanan();
+            new ControllerMenuSimpanan(this.id);
             this.view.dispose();
         }
     }

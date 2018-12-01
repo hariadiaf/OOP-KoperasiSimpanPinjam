@@ -16,12 +16,14 @@ public class ControllerPinjaman implements ActionListener {
     private Pinjaman model;
     private Database db;
     private ResultSet rs;
+    private String id;
 
-    public ControllerPinjaman() {
+    public ControllerPinjaman(String id) {
         view = new ViewPinjaman();
         db = new Database();
         view.setVisible(true);
         view.addActionListener(this);
+        this.id= id;
 
 //        this.view.addPinjamListener(new ActionListener() {
 //            @Override
@@ -57,7 +59,7 @@ public class ControllerPinjaman implements ActionListener {
             int angsuran = 0;
 
 //        rs = db.selectedPinjaman("PIN201802");
-            Pinjaman pinjam = new Pinjaman("MBR001", "PIN002", Double.parseDouble(jmlPinjaman), String.valueOf(durasi), tPinjam, bunga, angsuran, "namaPinjaman");
+            Pinjaman pinjam = new Pinjaman(this.id, "PIN002", Double.parseDouble(jmlPinjaman), String.valueOf(durasi), tPinjam, bunga, angsuran, "namaPinjaman");
             db.addPinjaman(pinjam);
         } catch (NumberFormatException e) {
             System.err.println("error : " + e.getMessage());
@@ -76,7 +78,7 @@ public class ControllerPinjaman implements ActionListener {
                 Logger.getLogger(ControllerPinjaman.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else if (source.equals(view.getBtnBackInPinj())) {
-            new ControllerMenuAnggota();
+            new ControllerMenuAnggota(this.id);
             this.view.dispose();
         }
     }

@@ -10,10 +10,12 @@ import koperasisimmpanpinjam.view.ViewSimpananWajib1;
 public class ControllerMenuSimpanan implements ActionListener{
     private ViewMenuSimpanan1 view;
     private Database db;
+    private String id;
 
-    public ControllerMenuSimpanan() {
+    public ControllerMenuSimpanan(String id) {
         view = new ViewMenuSimpanan1();
         db = new Database();
+        this.id=id;
         view.addActionListener(this);
         view.setVisible(true);
     }
@@ -25,17 +27,17 @@ public class ControllerMenuSimpanan implements ActionListener{
     public void toSimpananPokok(){
 //        ViewSimpananPokok1 pokok = new ViewSimpananPokok1();
 //        pokok.setVisible(true);
-        new ControllerSimpananPokok();
+        new ControllerSimpananPokok(this.id);
         this.view.dispose();
     }
     
     public void toSimpananWajib(){
-       new ControllerSimpananWajib();
+       new ControllerSimpananWajib(this.id);
         this.view.dispose();
     }
     
     public void toMenuAnggota(){
-        new ControllerMenuAnggota();
+        new ControllerMenuAnggota(this.id);
         this.view.dispose();
     }
 

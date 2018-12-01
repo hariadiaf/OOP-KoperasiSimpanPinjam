@@ -16,6 +16,8 @@ public class DriverKoperasiSimmpanPinjam {
         //System.out.println("Hasil List : "+database.getAngsuran().size());
 //        ControllerAdmin cAdmin = new ControllerAdmin(new ViewAdmin());
         new ControllerLogin();
+        //ControllerPinjaman an = new ControllerPinjaman();
+        //an.showView();
 //        cAdmin.showView();
         
     }

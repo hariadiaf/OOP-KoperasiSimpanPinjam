@@ -41,10 +41,10 @@ public class ControllerLogin {
         this.view.dispose();
     }
 
-    public void toAnggota() {
-        new ControllerMenuAnggota();
-        this.view.dispose();
-    }
+    //public void toAnggota() {
+    //    new ControllerMenuAnggota(rs.getString(""));
+    //    this.view.dispose();
+    //}
 
     public void masuk() throws SQLException {
         db.connect();
@@ -63,7 +63,8 @@ public class ControllerLogin {
                 if (rs.next()) {
                     if (username.equals(rs.getString("username")) && password.equals(rs.getString("password"))) {
                         view.dispose();
-                        new ControllerMenuAnggota();
+                        
+                        new ControllerMenuAnggota(rs.getString("id_anggota")); //changes here
                         view.showMessage("Login Berhasil", "Login", 1);
                     }
                 } else {

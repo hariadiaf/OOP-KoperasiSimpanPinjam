@@ -440,8 +440,8 @@ public class Database {
         query += "'" + pinj.getTglPinjaman() + "',";
         query += "'" + pinj.getBunga() + "',";
         query += "'" + pinj.getAngsuran() + "',";
-        query += "'" + pinj.getNoAnggota() + "',";
-        query += "'" + pinj.getNamaPinjaman() + "'";
+        query += "'" + pinj.getNoAnggota() + "'";
+        //query += "'" + pinj.getNamaPinjaman() + "'";
         query += ")";
         System.out.println(query);
         if (manipulate(query)) {

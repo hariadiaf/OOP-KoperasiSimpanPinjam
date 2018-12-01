@@ -7,10 +7,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-
 public class ViewAngsuran1 extends javax.swing.JFrame {
 
-    
     public ViewAngsuran1() {
         initComponents();
     }
@@ -30,7 +28,6 @@ public class ViewAngsuran1 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tAngsuran = new javax.swing.JTable();
         btnBayarAngsuran = new javax.swing.JButton();
-        btnDetailAngsuran = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btnKembaliMenuUtama = new javax.swing.JButton();
 
@@ -68,21 +65,17 @@ public class ViewAngsuran1 extends javax.swing.JFrame {
 
         btnBayarAngsuran.setText("Bayar");
 
-        btnDetailAngsuran.setText("Detail");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnBayarAngsuran)
-                .addGap(18, 18, 18)
-                .addComponent(btnDetailAngsuran)
-                .addGap(17, 17, 17))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1380, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1400, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnBayarAngsuran)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -91,9 +84,7 @@ public class ViewAngsuran1 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBayarAngsuran)
-                    .addComponent(btnDetailAngsuran))
+                .addComponent(btnBayarAngsuran)
                 .addContainerGap())
         );
 
@@ -131,7 +122,7 @@ public class ViewAngsuran1 extends javax.swing.JFrame {
                         .addComponent(btnKembaliMenuUtama, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(25, 25, 25)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(477, Short.MAX_VALUE))
+                .addContainerGap(496, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -189,7 +180,6 @@ public class ViewAngsuran1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBayarAngsuran;
-    private javax.swing.JButton btnDetailAngsuran;
     private javax.swing.JButton btnKembaliMenuUtama;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
@@ -205,14 +195,6 @@ public class ViewAngsuran1 extends javax.swing.JFrame {
 
     public void setBtnBayarAngsuran(JButton btnBayarAngsuran) {
         this.btnBayarAngsuran = btnBayarAngsuran;
-    }
-
-    public JButton getBtnDetailAngsuran() {
-        return btnDetailAngsuran;
-    }
-
-    public void setBtnDetailAngsuran(JButton btnDetailAngsuran) {
-        this.btnDetailAngsuran = btnDetailAngsuran;
     }
 
     public JScrollPane getjScrollPane1() {
@@ -231,32 +213,27 @@ public class ViewAngsuran1 extends javax.swing.JFrame {
         this.tAngsuran = tAngsuran;
     }
 
-     public JTable getTbMahasiswa() {
+    public JTable getTbMahasiswa() {
         return tAngsuran;
     }
 
-    public int getSelectedMahasiswa(){
+    public int getSelectedMahasiswa() {
         return tAngsuran.getSelectedRow();
     }
-  
-    public void setTbMahasiswa(DefaultTableModel x){
+
+    public void setTbMahasiswa(DefaultTableModel x) {
         tAngsuran.setModel(x);
     }
-    
-      public void addActionListener(ActionListener x){
+
+    public void addActionListener(ActionListener x) {
         btnBayarAngsuran.addActionListener(x);
-      
     }
-      
-      public void addActionListenerDetilAngsuran(ActionListener x){
-           btnDetailAngsuran.addActionListener(x);
-      }
-      
-      public void addActionListenerKembaliUtama(ActionListener x){   
-            btnKembaliMenuUtama.addActionListener(x);
-      }
-      
-       public void addMouseAdapter(MouseAdapter x){
+
+    public void addActionListenerKembaliUtama(ActionListener x) {
+        btnKembaliMenuUtama.addActionListener(x);
+    }
+
+    public void addMouseAdapter(MouseAdapter x) {
         tAngsuran.addMouseListener(x);
     }
 
@@ -266,5 +243,5 @@ public class ViewAngsuran1 extends javax.swing.JFrame {
 
     public void setBtnKembaliMenuUtama(JButton btnKembaliMenuUtama) {
         this.btnKembaliMenuUtama = btnKembaliMenuUtama;
-    } 
+    }
 }

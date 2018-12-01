@@ -107,7 +107,7 @@ public class ViewMenuAnggota extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1561, 1234);
+        jPanel1.setBounds(0, 0, 1561, 1240);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

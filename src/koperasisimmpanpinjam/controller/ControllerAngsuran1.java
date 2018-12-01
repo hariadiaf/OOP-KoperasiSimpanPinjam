@@ -20,12 +20,14 @@ public class ControllerAngsuran1 extends MouseAdapter {
     private Angsuran model;
     private ResultSet rs;
     private DefaultTableModel dtm;
+    private String id;
 
-    public ControllerAngsuran1() {
+    public ControllerAngsuran1(String id) {
         view = new ViewAngsuran1();
         db = new Database();
         loadTable();
         view.setVisible(true);
+        this.id=id;
 
         view.addActionListenerKembaliUtama(new ActionListener() {
             @Override
@@ -34,24 +36,25 @@ public class ControllerAngsuran1 extends MouseAdapter {
             }
         });
 
-        view.addActionListenerDetilAngsuran(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                int row = view.getSelectedMahasiswa();
-                String id = view.getTbMahasiswa().getModel().getValueAt(row, 1).toString();
-                new ControllerAngsuran2(id);
-            }
-        });
+    //    view.addActionListenerDetilAngsuran(new ActionListener() {
+    //        @Override
+   //         public void actionPerformed(ActionEvent e) {
+//
+   //             int row = view.getSelectedMahasiswa();
+    //            String id = view.getTbMahasiswa().getModel().getValueAt(row, 1).toString();
+    //            new ControllerAngsuran2(id);
+    //        }
+    //    });
     }
 
+   
     public void showViews() {
         this.view.setLocationRelativeTo(view);
         this.view.setVisible(true);
     }
 
     public void toMenuAnggota() {
-        new ControllerMenuAnggota();
+        new ControllerMenuAnggota(this.id);
         this.view.dispose();
     }
     
@@ -81,5 +84,4 @@ public class ControllerAngsuran1 extends MouseAdapter {
         }
         view.setTbMahasiswa(dtm);
     }
-
 }

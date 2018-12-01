@@ -15,11 +15,13 @@ public class ControllerSimpananPokok implements ActionListener{
     private Database db;
     private Simpanan model;
     private ResultSet rs;
+    private String id;
 
-    public ControllerSimpananPokok() {
+    public ControllerSimpananPokok(String id) {
         view = new ViewSimpananPokok1();
         view.addActionListener(this);
         db = new Database();
+        this.id = id;
         view.setVisible(true);
     }
 
@@ -56,7 +58,7 @@ public class ControllerSimpananPokok implements ActionListener{
                 Logger.getLogger(ControllerSimpananPokok.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else if(source.equals(view.getBtnBackInSimpPokok())){
-            new ControllerMenuSimpanan();
+            new ControllerMenuSimpanan(this.id);
             this.view.dispose();
         }
     }
