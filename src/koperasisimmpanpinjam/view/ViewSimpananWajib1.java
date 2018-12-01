@@ -241,9 +241,9 @@ public class ViewSimpananWajib1 extends javax.swing.JFrame {
     private javax.swing.JLabel txtTanggal1;
     // End of variables declaration//GEN-END:variables
     
-    public void addBayarListener(ActionListener x){
-        btnBayar.addActionListener(x);
-    }
+//    public void addBayarListener(ActionListener x){
+//        btnBayar.addActionListener(x);
+//    }
 
     public String getInputDibayar() {
         return inputDibayar.getText();
@@ -292,6 +292,19 @@ public class ViewSimpananWajib1 extends javax.swing.JFrame {
     public void setCheckBoxSimpananWajib(JCheckBox checkBoxSimpananWajib) {
         this.checkBoxSimpananWajib = checkBoxSimpananWajib;
     }
+
+    public JButton getBtnBayar() {
+        return btnBayar;
+    }
+
+    public void setBtnBayar(JButton btnBayar) {
+        this.btnBayar = btnBayar;
+    }
     
     
+    
+    public void addActionListener(ActionListener e){
+        btnBackInSimpWajib.addActionListener(e);
+        btnBayar.addActionListener(e);
+    }
 }

@@ -30,8 +30,7 @@ public class ControllerMenuSimpanan implements ActionListener{
     }
     
     public void toSimpananWajib(){
-        ViewSimpananWajib1 wajib = new ViewSimpananWajib1();
-        wajib.setVisible(true);
+       new ControllerSimpananWajib();
         this.view.dispose();
     }
     

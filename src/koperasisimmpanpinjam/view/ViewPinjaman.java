@@ -48,6 +48,7 @@ public class ViewPinjaman extends javax.swing.JFrame {
         cbText1 = new javax.swing.JLabel();
         cbText2 = new javax.swing.JLabel();
         txtPinjaman = new javax.swing.JLabel();
+        btnBackInPinj = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -175,7 +176,7 @@ public class ViewPinjaman extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(inputNamaPinjPinjaman, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txNamaPinjaman))
-                .addGap(38, 38, 38)
+                .addGap(44, 44, 44)
                 .addComponent(checkBoxPinjaman)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cbText1)
@@ -190,6 +191,10 @@ public class ViewPinjaman extends javax.swing.JFrame {
         txtPinjaman.setForeground(new java.awt.Color(255, 255, 255));
         txtPinjaman.setText("Pinjaman");
 
+        btnBackInPinj.setFont(new java.awt.Font("Roboto", 1, 32)); // NOI18N
+        btnBackInPinj.setForeground(new java.awt.Color(204, 0, 51));
+        btnBackInPinj.setText("Kembali");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -199,8 +204,10 @@ public class ViewPinjaman extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnBackInPinj, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txtPinjaman)
                         .addGap(55, 55, 55))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -212,7 +219,9 @@ public class ViewPinjaman extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
-                .addComponent(txtPinjaman)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtPinjaman)
+                    .addComponent(btnBackInPinj, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(109, Short.MAX_VALUE))
@@ -246,6 +255,7 @@ public class ViewPinjaman extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBackInPinj;
     private javax.swing.JButton btnPinjam;
     private javax.swing.JLabel cbText1;
     private javax.swing.JLabel cbText2;
@@ -314,7 +324,17 @@ public class ViewPinjaman extends javax.swing.JFrame {
     public void setBtnPinjam(JButton btnPinjam) {
         this.btnPinjam = btnPinjam;
     }
+
+    public JButton getBtnBackInPinj() {
+        return btnBackInPinj;
+    }
+
+    public void setBtnBackInPinj(JButton btnBackInPinj) {
+        this.btnBackInPinj = btnBackInPinj;
+    }
+    
     public void addActionListener(ActionListener e){
         btnPinjam.addActionListener(e);
+        btnBackInPinj.addActionListener(e);
     }
 }

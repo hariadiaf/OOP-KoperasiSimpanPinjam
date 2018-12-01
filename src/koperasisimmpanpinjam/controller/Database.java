@@ -109,6 +109,27 @@ public class Database {
         }
         return rs;
     }
+    public ResultSet selectedAngsuran(String id_angsuran) {
+        connect();
+         try {
+            String query = "SELECT * FROM angsuran where id_angsuran ='" + id_angsuran + "'";
+             System.out.println(query);
+            rs = stmt.executeQuery(query);
+        } catch (SQLException e) {
+            System.out.println("Error :" + e.getMessage());
+        }
+        return rs;
+    }
+    public ResultSet selectedPinjaman(String id_pinjaman) {
+         try {
+            String query = "SELECT * FROM pinjaman where id_pijaman ='" + id_pinjaman + "'";
+            rs = stmt.executeQuery(query);
+        } catch (Exception e) {
+            System.out.println("Error :" + e);
+        }
+        return rs;
+    }    
+    
 
     public void insertDataPokok(Simpanan pokok) {
         Boolean berhasil = false;
@@ -132,7 +153,7 @@ public class Database {
     public void loadAngsuran() {
         connect();
         try {
-            String query = "SELECT * FROM angsuran";
+            String query = "SELECT * FROM angsuran inner join anggota on angsuran.id_anggota = anggota.id_anggota inner join pinjaman on pinjaman.id_pinjaman = angsuran.id_pinjaman";
             rs = stmt.executeQuery(query);
             while (rs.next()) {
                 angsuran.add(new Angsuran(rs.getString("id_anggota"), rs.getString("id_angsuran"), rs.getDouble("banyak_pinjaman"), rs.getDouble("sisa_angsuran"), rs.getString("id_pinjaman"), rs.getFloat("bunga"), rs.getDate("tgl_angsuran"), rs.getDouble("denda")));
@@ -316,7 +337,7 @@ public class Database {
         query += "'" + pinj.getAngsuran() + "',";
         query += "'" + pinj.getNoAnggota() + "'";
         query += ")";
-
+        System.out.println(query);
         if (manipulate(query)) {
             pinjaman.add(pinj);
         }
