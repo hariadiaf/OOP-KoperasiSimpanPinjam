@@ -22,10 +22,11 @@ public class ControllerAdmin extends Database {
     private Database db;
     DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
 
-    public ControllerAdmin(ViewAdmin view) {
-        this.view = view;
+    public ControllerAdmin() {
+        this.view = new ViewAdmin();
         //this.model1 = model1;
         //this.model2 = model2;
+        view.setVisible(true);
         loadMember();
         this.view.addHapusListener(new ActionListener() {
             @Override
@@ -49,14 +50,10 @@ public class ControllerAdmin extends Database {
                 } catch (SQLException ex) {
                     Logger.getLogger(ControllerAdmin.class.getName()).log(Level.SEVERE,null,ex);
                 }
-            
-        }
+            }
         });
     };
 
-    ControllerAdmin() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     public void toDetailAnggota(Anggota a) {
         ViewAdminDetail aView = new ViewAdminDetail();
@@ -88,7 +85,6 @@ public class ControllerAdmin extends Database {
     public Anggota getInfoAnggota() throws SQLException {
         String id = this.view.getSelectedId();
         Anggota a = findAnggota(id);
-        
         return a;
     };
 

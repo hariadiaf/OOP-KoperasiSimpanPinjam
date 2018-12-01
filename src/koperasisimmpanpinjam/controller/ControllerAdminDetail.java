@@ -30,7 +30,7 @@ public class ControllerAdminDetail extends Database {
 
     public void toAnggotaList() throws SQLException {
         System.out.println("kembali");
-        ControllerAdmin ad = new ControllerAdmin(new ViewAdmin());
+        ControllerAdmin ad = new ControllerAdmin();
         ad.showView();
         this.view.dispose();
     }

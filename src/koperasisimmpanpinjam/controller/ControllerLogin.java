@@ -62,13 +62,23 @@ public class ControllerLogin {
 
                 if (rs.next()) {
                     if (username.equals(rs.getString("username")) && password.equals(rs.getString("password"))) {
-                        view.dispose();
-                        new ControllerMenuAnggota();
-                        view.showMessage("Login Berhasil", "Login", 1);
+                        if  ((username.equals("admin") ) && (password.equals("admin"))) {
+                            view.dispose();
+                            new ControllerAdmin();
+                        } else {
+                            view.dispose();
+                            new ControllerMenuAnggota();
+                            view.showMessage("Login Berhasil", "Login", 1);
+                        }
+
                     }
+
                 } else {
+                    System.out.println(username + " " + password);
+                    System.out.println(username.compareTo("admin"));
+                    System.out.println(password.compareTo("admin"));
                     view.showMessage("Username atau Password salah", "Login", 0);
-                   
+
                 }
 
                 db.disconnect();
