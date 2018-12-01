@@ -11,7 +11,6 @@ public class ViewMenuAnggota extends javax.swing.JFrame {
         initComponents();
         
     }
-
    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -23,6 +22,7 @@ public class ViewMenuAnggota extends javax.swing.JFrame {
         btnSimpanan = new javax.swing.JButton();
         btnPinjaman = new javax.swing.JButton();
         btnAngsuran = new javax.swing.JButton();
+        btnLogOutAnggota = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1440, 1042));
@@ -62,6 +62,10 @@ public class ViewMenuAnggota extends javax.swing.JFrame {
             }
         });
 
+        btnLogOutAnggota.setFont(new java.awt.Font("Roboto", 1, 32)); // NOI18N
+        btnLogOutAnggota.setForeground(new java.awt.Color(204, 0, 51));
+        btnLogOutAnggota.setText("Keluar!");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -69,7 +73,9 @@ public class ViewMenuAnggota extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(91, 91, 91)
-                .addComponent(btnSimpanan, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSimpanan, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLogOutAnggota, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtMenuAnggota, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -84,8 +90,13 @@ public class ViewMenuAnggota extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104)
-                .addComponent(txtMenuAnggota)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(txtMenuAnggota))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(126, 126, 126)
+                        .addComponent(btnLogOutAnggota, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(120, 120, 120)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,6 +119,7 @@ public class ViewMenuAnggota extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAngsuran;
+    private javax.swing.JButton btnLogOutAnggota;
     private javax.swing.JButton btnPinjaman;
     private javax.swing.JButton btnSimpanan;
     private javax.swing.JPanel jPanel1;
@@ -139,10 +151,19 @@ public class ViewMenuAnggota extends javax.swing.JFrame {
         this.btnSimpanan = btnSimpanan;
     }
 
+    public JButton getBtnLogOutAnggota() {
+        return btnLogOutAnggota;
+    }
+
+    public void setBtnLogOutAnggota(JButton btnLogOutAnggota) {
+        this.btnLogOutAnggota = btnLogOutAnggota;
+    }
+    
     public void addActionListener(ActionListener x){
         btnSimpanan.addActionListener(x);
         btnAngsuran.addActionListener(x);
         btnPinjaman.addActionListener(x);
+        btnLogOutAnggota.addActionListener(x);
     }
     
 }

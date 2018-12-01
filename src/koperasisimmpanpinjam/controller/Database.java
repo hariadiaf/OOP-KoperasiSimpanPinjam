@@ -72,6 +72,18 @@ public class Database {
         return cek;
     }//end manipulate
 
+    public ResultSet selectedLogin(String username, String pass) {
+        connect();
+        try {
+            String query = "SELECT * FROM login where username ='" + username + "' and password = '" + pass + "'";
+            System.out.println(query);
+            rs = stmt.executeQuery(query);
+        } catch (SQLException e) {
+            System.out.println("Error :" + e.getMessage());
+        }
+        return rs;
+    }
+
     public void loadAdmin() {
         connect();
         try {
@@ -110,27 +122,28 @@ public class Database {
         }
         return rs;
     }
+
     public ResultSet selectedAngsuran(String id_angsuran) {
         connect();
-         try {
+        try {
             String query = "SELECT * FROM angsuran where id_angsuran ='" + id_angsuran + "'";
-             System.out.println(query);
+            System.out.println(query);
             rs = stmt.executeQuery(query);
         } catch (SQLException e) {
             System.out.println("Error :" + e.getMessage());
         }
         return rs;
     }
+
     public ResultSet selectedPinjaman(String id_pinjaman) {
-         try {
+        try {
             String query = "SELECT * FROM pinjaman where id_pijaman ='" + id_pinjaman + "'";
             rs = stmt.executeQuery(query);
         } catch (Exception e) {
             System.out.println("Error :" + e);
         }
         return rs;
-    }    
-    
+    }
 
     public void insertDataPokok(Simpanan pokok) {
         Boolean berhasil = false;
@@ -150,11 +163,12 @@ public class Database {
             System.err.println("error :" + e);
         }
     }
+
     public void loadAnggotaDetail(String idAnggota) throws SQLException {
         connect();
         String query = "SELECT * FROM 'anggota' WHERE id_anggota ='" + idAnggota + "'";
         rs = stmt.executeQuery(query);
-       disconnect();
+        disconnect();
     }
 
     public Anggota findAnggota(String id) {
@@ -232,7 +246,7 @@ public class Database {
             String query = "SELECT * FROM pinjaman";
             rs = stmt.executeQuery(query);
             while (rs.next()) {
-                pinjaman.add(new Pinjaman(rs.getString("id_anggota"), rs.getString("id_pinjaman"), rs.getDouble("jml_pinjaman"), rs.getString("durasi_pinjaman"), rs.getDate("tgl_pinjaman"), rs.getFloat("bunga"), rs.getInt("angsuran")));
+                pinjaman.add(new Pinjaman(rs.getString("id_anggota"), rs.getString("id_pinjaman"), rs.getDouble("jml_pinjaman"), rs.getString("durasi_pinjaman"), rs.getDate("tgl_pinjaman"), rs.getFloat("bunga"), rs.getInt("angsuran"), rs.getString("Nama_Pinjaman")));
             }
         } catch (SQLException ex) {
             System.out.println("Error : " + ex);
@@ -256,7 +270,8 @@ public class Database {
                             rs.getString("durasi_pinjaman"),
                             rs.getDate("tgl_pinjaman"),
                             rs.getFloat("bunga"),
-                            rs.getInt("angsuran")
+                            rs.getInt("angsuran"),
+                            rs.getString("Nama_Pinjaman")
                     );
                 }
             } else {
@@ -425,7 +440,8 @@ public class Database {
         query += "'" + pinj.getTglPinjaman() + "',";
         query += "'" + pinj.getBunga() + "',";
         query += "'" + pinj.getAngsuran() + "',";
-        query += "'" + pinj.getNoAnggota() + "'";
+        query += "'" + pinj.getNoAnggota() + "',";
+        query += "'" + pinj.getNamaPinjaman() + "'";
         query += ")";
         System.out.println(query);
         if (manipulate(query)) {
@@ -633,7 +649,7 @@ public class Database {
     public void updateAdmin(Admin adm) {
         connect();
         String query = "UPDATE admin SET";
-        query += " WHERE id_admin ='" + adm.getIdAdmin() + "',";
+        query += " WHERE id_admin ='" + adm.getIdAdmin() + "'";
         if (manipulate(query)) {
             for (Admin admin : admin) {
                 if (admin.getIdAdmin().equals(adm.getIdAdmin())) {
@@ -649,7 +665,7 @@ public class Database {
         String query = "UPDATE anggota SET";
         query += " nama_anggota='" + member.getNamaAnggota() + "',";
         query += " alamat='" + member.getAlamat() + "',";
-        query += " status='" + member.getStatus() + "'";
+        query += " status='" + member.getStatus() + "',";
         query += " tgl_lahir='" + member.getTglLahir() + "'";
         query += " WHERE id_anggota='" + member.getNoAnggota() + "'";
 
@@ -672,10 +688,10 @@ public class Database {
         String query = "UPDATE angsuran SET";
         query += " banyak_pinjaman='" + angs.getBanyakPinjaman() + "',";
         query += " sisa_angsuran='" + angs.getSisaAngsuran() + "',";
-        query += " bunga='" + angs.getBunga() + "'";
-        query += " tgl_angsuran='" + angs.getTglAngsuran() + "'";
-        query += " denda='" + angs.getDenda() + "'";
-        query += " id_anggota='" + angs.getNoAnggota() + "'";
+        query += " bunga='" + angs.getBunga() + "',";
+        query += " tgl_angsuran='" + angs.getTglAngsuran() + "',";
+        query += " denda='" + angs.getDenda() + "',";
+        query += " id_anggota='" + angs.getNoAnggota() + "',";
         query += " id_pinjaman='" + angs.getIdPinjaman() + "'";
         query += " WHERE id_angsuran='" + angs.getIdAngsuran() + "'";
 
@@ -700,7 +716,7 @@ public class Database {
         connect();
         String query = "UPDATE catatan SET";
         query += " jenis_catatan='" + note.get_jenisCatatan() + "',";
-        query += " keuangan='" + note.getKeuangan() + "',";
+        query += " keuangan='" + note.getKeuangan() + "'";
         query += " WHERE id_catatan='" + note.getIdCatatan() + "'";
 
         if (manipulate(query)) {
@@ -720,7 +736,7 @@ public class Database {
         String query = "UPDATE login SET";
         query += " password='" + masuk.getPass() + "',";
         query += " id_anggota='" + masuk.getNoAnggota() + "',";
-        query += " id='" + masuk.getIdAdmin() + "',";
+        query += " id='" + masuk.getIdAdmin() + "'";
         query += " WHERE username='" + masuk.getUsername() + "'";
 
         if (manipulate(query)) {
@@ -741,10 +757,11 @@ public class Database {
         String query = "UPDATE pinjaman SET";
         query += " jml_pinjaman='" + pinj.getJmlPinjaman() + "',";
         query += " durasi_pinjaman='" + pinj.getDurasiPinjaman() + "',";
-        query += " tgl_pinjaman='" + pinj.getTglPinjaman() + "'";
-        query += " bunga='" + pinj.getBunga() + "'";
-        query += " angsuran='" + pinj.getAngsuran() + "'";
-        query += " id_anggota='" + pinj.getNoAnggota() + "'";
+        query += " tgl_pinjaman='" + pinj.getTglPinjaman() + "',";
+        query += " bunga='" + pinj.getBunga() + "',";
+        query += " angsuran='" + pinj.getAngsuran() + "',";
+        query += " id_anggota='" + pinj.getNoAnggota() + "',";
+        query += " Nama_Pinjaman'" + pinj.getNoAnggota() + "'";
         query += " WHERE id_pinjaman='" + pinj.get_idPinjaman() + "'";
 
         if (manipulate(query)) {
@@ -768,7 +785,7 @@ public class Database {
         String query = "UPDATE simpanan SET";
         query += " jml_simpanan='" + simp.getJumlahSimpanan() + "',";
         query += " simpanan_pokok='" + simp.getSimpananPokok() + "',";
-        query += " simpanan_wajib='" + simp.getSimpananWajib() + "'";
+        query += " simpanan_wajib='" + simp.getSimpananWajib() + "',";
         query += " id_anggota='" + simp.getNoAnggota() + "'";
         query += " WHERE id_simpanan='" + simp.getIdSimpanan() + "'";
 

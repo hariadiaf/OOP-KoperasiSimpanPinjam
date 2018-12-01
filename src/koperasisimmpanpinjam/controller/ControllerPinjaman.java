@@ -57,7 +57,7 @@ public class ControllerPinjaman implements ActionListener {
             int angsuran = 0;
 
 //        rs = db.selectedPinjaman("PIN201802");
-            Pinjaman pinjam = new Pinjaman("MBR001", "PIN002", Double.parseDouble(jmlPinjaman), String.valueOf(durasi), tPinjam, bunga, angsuran);
+            Pinjaman pinjam = new Pinjaman("MBR001", "PIN002", Double.parseDouble(jmlPinjaman), String.valueOf(durasi), tPinjam, bunga, angsuran, "namaPinjaman");
             db.addPinjaman(pinjam);
         } catch (NumberFormatException e) {
             System.err.println("error : " + e.getMessage());

@@ -6,6 +6,7 @@
 package koperasisimmpanpinjam.view;
 
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import javax.swing.JTextField;
 
 /**
@@ -45,6 +46,7 @@ public class ViewAngsuran2 extends javax.swing.JFrame {
         checkBoxAngsuran = new javax.swing.JCheckBox();
         cbText1Angs = new javax.swing.JLabel();
         txtAngsuran = new javax.swing.JLabel();
+        btnKembaliListAngsuran = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -182,6 +184,10 @@ public class ViewAngsuran2 extends javax.swing.JFrame {
         txtAngsuran.setForeground(new java.awt.Color(255, 255, 255));
         txtAngsuran.setText("Angsuran");
 
+        btnKembaliListAngsuran.setFont(new java.awt.Font("Roboto", 1, 32)); // NOI18N
+        btnKembaliListAngsuran.setForeground(new java.awt.Color(255, 0, 51));
+        btnKembaliListAngsuran.setText("Kembali");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -191,8 +197,11 @@ public class ViewAngsuran2 extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtAngsuran)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnKembaliListAngsuran)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtAngsuran))
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(132, 132, 132))
         );
@@ -201,7 +210,9 @@ public class ViewAngsuran2 extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
-                .addComponent(txtAngsuran)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtAngsuran)
+                    .addComponent(btnKembaliListAngsuran, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(129, Short.MAX_VALUE))
@@ -240,6 +251,7 @@ public class ViewAngsuran2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField DeadlineAngsuran;
     private javax.swing.JButton btnBayarAngsuran;
+    private javax.swing.JButton btnKembaliListAngsuran;
     private javax.swing.JLabel cbText1Angs;
     private javax.swing.JCheckBox checkBoxAngsuran;
     private javax.swing.JTextField inputAngsAngsuran;
@@ -288,9 +300,21 @@ public class ViewAngsuran2 extends javax.swing.JFrame {
     public void setTglAngsuran(String TglAngsuran){
         this.inputTglAngsuran.setText(TglAngsuran);
     }
+
+    public JButton getBtnKembaliListAngsuran() {
+        return btnKembaliListAngsuran;
+    }
+
+    public void setBtnKembaliListAngsuran(JButton btnKembaliListAngsuran) {
+        this.btnKembaliListAngsuran = btnKembaliListAngsuran;
+    }
+    
+    
     
     public void addActionListener(ActionListener x){
         btnBayarAngsuran.addActionListener(x);
+        btnKembaliListAngsuran.addActionListener(x);
     }
+    
 
 }

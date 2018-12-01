@@ -12,7 +12,7 @@ import koperasisimmpanpinjam.model.Angsuran;
 import koperasisimmpanpinjam.view.ViewAngsuran1;
 import koperasisimmpanpinjam.view.ViewAngsuran2;
 
-public class ControllerAngsuran1 extends MouseAdapter implements ActionListener {
+public class ControllerAngsuran1 extends MouseAdapter {
 
     private ViewAngsuran1 view;
     private ViewAngsuran2 viewDetail;
@@ -26,7 +26,23 @@ public class ControllerAngsuran1 extends MouseAdapter implements ActionListener 
         db = new Database();
         loadTable();
         view.setVisible(true);
-        view.addActionListener(this);
+
+        view.addActionListenerKembaliUtama(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                toMenuAnggota();
+            }
+        });
+
+        view.addActionListenerDetilAngsuran(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                int row = view.getSelectedMahasiswa();
+                String id = view.getTbMahasiswa().getModel().getValueAt(row, 1).toString();
+                new ControllerAngsuran2(id);
+            }
+        });
     }
 
     public void showViews() {
@@ -34,22 +50,11 @@ public class ControllerAngsuran1 extends MouseAdapter implements ActionListener 
         this.view.setVisible(true);
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-//        view = new ViewAngsuran1();
-//        db = new Database();
-//        view.addActionListener(this);
-//        view.addMouseAdapter(this);
-//        view.setVisible(true);
-        int row = view.getSelectedMahasiswa();
-        String id = view.getTbMahasiswa().getModel().getValueAt(row, 1).toString();
-        Object source = e.getSource();
-        if (source.equals(view.getBtnDetailAngsuran())) {
-            new ControllerAngsuran2(id);
-
-        }
+    public void toMenuAnggota() {
+        new ControllerMenuAnggota();
+        this.view.dispose();
     }
-
+    
     public void deleteAngsuran1() throws SQLException {
         db.connect();
         int row = view.getSelectedMahasiswa();
@@ -76,6 +81,5 @@ public class ControllerAngsuran1 extends MouseAdapter implements ActionListener 
         }
         view.setTbMahasiswa(dtm);
     }
-
 
 }

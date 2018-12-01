@@ -13,6 +13,7 @@ public class Pinjaman implements Editableiface{
     private ArrayList<Catatan> catatan;
     private int angsuran;
     private int jmlAngsuran;
+    private String namaPinjaman;
 
     public Pinjaman() {
         
@@ -24,7 +25,7 @@ public class Pinjaman implements Editableiface{
         catatan.get(0).set_jenisCatatan("Pinjaman");
     };
 
-    public Pinjaman(String noAnggota, String idPinjaman, double jmlPinjaman, String durasiPinjaman, Date tglPinjaman, float bunga, int angsuran) {
+    public Pinjaman(String noAnggota, String idPinjaman, double jmlPinjaman, String durasiPinjaman, Date tglPinjaman, float bunga, int angsuran, String namaPinjaman) {
         this.noAnggota = noAnggota;
         this.idPinjaman = idPinjaman;
         this.jmlPinjaman = jmlPinjaman;
@@ -32,9 +33,18 @@ public class Pinjaman implements Editableiface{
         this.tglPinjaman = tglPinjaman;
         this.bunga = bunga;
         this.angsuran = angsuran;
+        this.namaPinjaman = namaPinjaman;
     }
 
-   
+    public String getNamaPinjaman() {
+        return namaPinjaman;
+    }
+
+    public void setNamaPinjaman(String namaPinjaman) {
+        this.namaPinjaman = namaPinjaman;
+    }
+
+    
 
     public String getNoAnggota() {
         return noAnggota;

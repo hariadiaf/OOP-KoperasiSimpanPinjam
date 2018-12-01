@@ -2,6 +2,7 @@ package koperasisimmpanpinjam.view;
 
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
@@ -62,7 +63,7 @@ public class ViewLoginKoperasi extends javax.swing.JFrame {
 
         btnLogin.setBackground(new java.awt.Color(68, 112, 177));
         btnLogin.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
-        btnLogin.setForeground(new java.awt.Color(0, 255, 255));
+        btnLogin.setForeground(new java.awt.Color(0, 0, 153));
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,15 +213,17 @@ public class ViewLoginKoperasi extends javax.swing.JFrame {
         return btnLogin.getText();
     }
 
-    public void setBtnLogin(String bntLogin) {
-        this.btnLogin.setText(bntLogin);
+    public void setBtnLogin(String btnLogin) {
+        this.btnLogin.setText(btnLogin);
     }
-    
-     public void addLoginListener(ActionListener x){
-        btnLogin.addActionListener(x);
-      
-    }
-     
-     
 
+
+    
+     public void addActionListener(ActionListener x){
+        btnLogin.addActionListener(x);
+    }
+
+    public void showMessage(String message, String title, int type){
+        JOptionPane.showMessageDialog(null, message, title, type);
+    }
 }

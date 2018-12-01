@@ -41,6 +41,11 @@ public class ControllerMenuAnggota implements ActionListener{
         new ControllerAngsuran1();
         this.view.dispose();
     }
+    
+    public void toLogOut(){
+        new ControllerLogin();
+        this.view.dispose();
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -51,7 +56,8 @@ public class ControllerMenuAnggota implements ActionListener{
            toPinjaman();
        }else if(source.equals(view.getBtnAngsuran())){
            toAngsuran();
+       }else if(source.equals(view.getBtnLogOutAnggota())){
+           toLogOut();
        }
-    }
-    
+    } 
 }
