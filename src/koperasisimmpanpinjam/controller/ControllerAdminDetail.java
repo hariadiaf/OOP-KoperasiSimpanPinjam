@@ -13,8 +13,8 @@ public class ControllerAdminDetail extends Database {
 
     private ViewAdminDetail view;
 
-    public ControllerAdminDetail(ViewAdminDetail view) {
-        this.view = view;
+    public ControllerAdminDetail() {
+        view = new ViewAdminDetail();
 
         this.view.addKembaliListener(new ActionListener() {
             @Override

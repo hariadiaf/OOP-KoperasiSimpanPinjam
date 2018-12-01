@@ -10,10 +10,12 @@ import koperasisimmpanpinjam.view.ViewPinjaman;
 public class ControllerMenuAnggota implements ActionListener{
     private ViewMenuAnggota view;
     private Database db;
+    private ControllerLogin cLogin;
 
-    public ControllerMenuAnggota() {
+    public ControllerMenuAnggota(ControllerLogin cLogin) {
         view = new ViewMenuAnggota();
         db = new Database();
+        this.cLogin = cLogin;
         view.addActionListener(this);
         view.setVisible(true);
 //        this.view.setBtnSimpanan(new ActionListener() {
@@ -25,12 +27,12 @@ public class ControllerMenuAnggota implements ActionListener{
     }
     
     public void toSimpanan(){
-       new ControllerMenuSimpanan();
+       new ControllerMenuSimpanan(cLogin);
        this.view.dispose();
     }
     
     public void toPinjaman(){
-        new ControllerPinjaman();
+        new ControllerPinjaman(cLogin);
         this.view.dispose();
         
     }
@@ -38,7 +40,7 @@ public class ControllerMenuAnggota implements ActionListener{
     public void toAngsuran(){
 //        ViewAngsuran1 angsur = new ViewAngsuran1();
 //        angsur.setVisible(true);
-        new ControllerAngsuran1();
+        new ControllerAngsuran1(cLogin);
         this.view.dispose();
     }
     

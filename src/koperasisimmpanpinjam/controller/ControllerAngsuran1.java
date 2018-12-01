@@ -20,13 +20,14 @@ public class ControllerAngsuran1 extends MouseAdapter {
     private Angsuran model;
     private ResultSet rs;
     private DefaultTableModel dtm;
+    private ControllerLogin cLogin;
 
-    public ControllerAngsuran1() {
+    public ControllerAngsuran1(ControllerLogin cLogin) {
         view = new ViewAngsuran1();
         db = new Database();
         loadTable();
         view.setVisible(true);
-
+        this.cLogin = cLogin;
         view.addActionListenerKembaliUtama(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -51,7 +52,7 @@ public class ControllerAngsuran1 extends MouseAdapter {
     }
 
     public void toMenuAnggota() {
-        new ControllerMenuAnggota();
+        new ControllerMenuAnggota(cLogin);
         this.view.dispose();
     }
     

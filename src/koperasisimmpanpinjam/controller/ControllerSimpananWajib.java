@@ -15,10 +15,11 @@ public class ControllerSimpananWajib  implements ActionListener{
     private Database db;
     private Simpanan model;
     private ResultSet rs;
-    
-    public ControllerSimpananWajib(){
+    private ControllerLogin cLogin;
+    public ControllerSimpananWajib(ControllerLogin cLogin){
         view = new ViewSimpananWajib1();
         view.addActionListener(this);
+        this.cLogin = cLogin;
         db = new Database();
         view.setVisible(true);
     }
@@ -55,7 +56,7 @@ public class ControllerSimpananWajib  implements ActionListener{
                 Logger.getLogger(ControllerSimpananWajib.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else if(source.equals(view.getBtnBackInSimpWajib())){
-            new ControllerMenuSimpanan();
+            new ControllerMenuSimpanan(cLogin);
             this.view.dispose();
         }
     }

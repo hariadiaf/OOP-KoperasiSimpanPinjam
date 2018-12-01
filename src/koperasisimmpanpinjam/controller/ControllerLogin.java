@@ -17,6 +17,15 @@ public class ControllerLogin {
     private Database db;
     private Login masuk;
     private ResultSet rs;
+    public String id_anggota;
+
+    public String getId_anggota() {
+        return id_anggota;
+    }
+
+    public void setId_anggota(String id_anggota) {
+        this.id_anggota = id_anggota;
+    }
 
     public ControllerLogin() {
         view = new ViewLoginKoperasi();
@@ -42,7 +51,7 @@ public class ControllerLogin {
     }
 
     public void toAnggota() {
-        new ControllerMenuAnggota();
+        new ControllerMenuAnggota(this);
         this.view.dispose();
     }
 
@@ -67,7 +76,9 @@ public class ControllerLogin {
                             new ControllerAdmin();
                         } else {
                             view.dispose();
-                            new ControllerMenuAnggota();
+                            id_anggota = rs.getString("id_anggota");
+                            System.out.println(id_anggota);
+                            new ControllerMenuAnggota(this);
                             view.showMessage("Login Berhasil", "Login", 1);
                         }
 

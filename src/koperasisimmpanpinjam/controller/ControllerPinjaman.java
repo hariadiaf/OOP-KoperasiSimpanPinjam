@@ -16,11 +16,13 @@ public class ControllerPinjaman implements ActionListener {
     private Pinjaman model;
     private Database db;
     private ResultSet rs;
+    private ControllerLogin cLogin;
 
-    public ControllerPinjaman() {
+    public ControllerPinjaman(ControllerLogin cLogin) {
         view = new ViewPinjaman();
         db = new Database();
         view.setVisible(true);
+        this.cLogin = cLogin;
         view.addActionListener(this);
 
 //        this.view.addPinjamListener(new ActionListener() {
@@ -76,7 +78,7 @@ public class ControllerPinjaman implements ActionListener {
                 Logger.getLogger(ControllerPinjaman.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else if (source.equals(view.getBtnBackInPinj())) {
-            new ControllerMenuAnggota();
+            new ControllerMenuAnggota(cLogin);
             this.view.dispose();
         }
     }

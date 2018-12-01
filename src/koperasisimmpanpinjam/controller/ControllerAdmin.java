@@ -75,7 +75,7 @@ public class ControllerAdmin extends Database {
         
         //aView.show();
         
-        ControllerAdminDetail adm = new ControllerAdminDetail(aView);
+        ControllerAdminDetail adm = new ControllerAdminDetail();
         adm.showView();
         this.view.dispose();
         System.out.println("disposed");
@@ -88,6 +88,12 @@ public class ControllerAdmin extends Database {
         return a;
     };
 
+    
+    public void toDetailAdmin(){
+        ControllerAdminDetail ad = new ControllerAdminDetail();
+        ad.showView();
+        this.view.dispose();
+    }
     public void loadMember() {
         DefaultTableModel dtm = new DefaultTableModel(new String[]{"id Anggota", "Nama", "Status", "Tanggal Lahir"}, 0);
         loadAnggota();
