@@ -81,7 +81,6 @@ public class ControllerLogin {
                             new ControllerMenuAnggota(this);
                             view.showMessage("Login Berhasil", "Login", 1);
                         }
-
                     }
 
                 } else {
@@ -89,7 +88,6 @@ public class ControllerLogin {
                     System.out.println(username.compareTo("admin"));
                     System.out.println(password.compareTo("admin"));
                     view.showMessage("Username atau Password salah", "Login", 0);
-
                 }
 
                 db.disconnect();
