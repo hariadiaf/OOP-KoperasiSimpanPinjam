@@ -68,7 +68,7 @@ public class ControllerLogin {
                 view.showMessage("Username atau Password kosong", "Login", 0);
             } else {
                 ResultSet rs = db.selectedLogin(username, password);
-
+                
                 if (rs.next()) {
                     if (username.equals(rs.getString("username")) && password.equals(rs.getString("password"))) {
                         if  ((username.equals("admin") ) && (password.equals("admin"))) {

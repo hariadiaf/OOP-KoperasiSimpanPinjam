@@ -18,7 +18,7 @@ public class ControllerPinjaman implements ActionListener {
     private ResultSet rs;
     private ControllerLogin cLogin;
 
-    public ControllerPinjaman(ControllerLogin cLogin) {
+    public ControllerPinjaman(String id) {
         view = new ViewPinjaman();
         db = new Database();
         view.setVisible(true);
@@ -59,7 +59,7 @@ public class ControllerPinjaman implements ActionListener {
             int angsuran = 0;
 
 //        rs = db.selectedPinjaman("PIN201802");
-            Pinjaman pinjam = new Pinjaman("MBR001", "PIN002", Double.parseDouble(jmlPinjaman), String.valueOf(durasi), tPinjam, bunga, angsuran, "namaPinjaman");
+            Pinjaman pinjam = new Pinjaman(this.cLogin.getId_anggota(), "PIN"+this.cLogin, Double.parseDouble(jmlPinjaman), String.valueOf(durasi), tPinjam, bunga, angsuran, "namaPinjaman");
             db.addPinjaman(pinjam);
         } catch (NumberFormatException e) {
             System.err.println("error : " + e.getMessage());

@@ -32,7 +32,7 @@ public class ControllerMenuAnggota implements ActionListener{
     }
     
     public void toPinjaman(){
-        new ControllerPinjaman(cLogin);
+        new ControllerPinjaman(cLogin.getId_anggota());
         this.view.dispose();
         
     }
